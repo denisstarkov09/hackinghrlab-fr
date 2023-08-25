@@ -1,0 +1,13 @@
+@import "styles/main.scss";
+
+.learning-journey-card-list {
+  display: flex;
+  flex-direction: column;
+  
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+}

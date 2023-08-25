@@ -1,0 +1,84 @@
+@import "styles/main.scss";
+
+.simulation-sprint-dashboard-page {
+  width: 100%;
+  height: 100%;
+  background: $color-white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-header{
+    width: 100%;
+    background: $color-background-dark;
+    min-height: 220px;
+    padding: 2.5rem;
+    position: relative;
+
+    .menu-simulation{
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 420px);
+      width: 100%;
+      max-width: 835px;
+      border-radius: 5px;
+      
+
+      @media  (max-width: 1200px){
+        left: 0;
+      }
+
+     & .menu-simulation-item{
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 !important;
+      padding: 0px 20px !important;
+
+      &:nth-child(2){
+       border-radius: 5px 0px 0px 5px;
+      }
+
+      &:nth-child(10){
+        border-radius: 0px 5px 5px 0px;
+       }
+ 
+
+      &:hover{
+        color: $color-primary !important;
+        border-bottom: 2px solid transparent !important;
+        transition: 300ms all ease-in;
+      }
+
+      &.ant-menu-item-selected{
+        background: $color-primary !important;
+        color: $color-white !important;
+      }
+      
+     }
+    }
+  }
+
+  &-body{
+    display: flex;
+    padding: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    max-height: 700px;
+    overflow: auto;
+
+
+    .the-basics{
+      width: 100%;
+      max-width: 1100px;
+
+    }
+  }
+
+  .simulation-sprint-members-container{
+    width: 100%;
+    display: flex;
+    padding-left: 12%;
+    flex-wrap: wrap;
+  }
+}

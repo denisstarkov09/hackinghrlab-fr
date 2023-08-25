@@ -1,0 +1,239 @@
+@import "styles/main.scss";
+
+.annual-conference-card {
+  background: $color-white;
+  border: 1px solid $color-border;
+  box-shadow: 4px 0px 14px #37215714;
+  border-radius: 0.5rem;
+  opacity: 1;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+
+  @media  (max-width: 500px){
+    max-width: 380px;
+  }
+
+  @media  (max-width: 400px){
+    max-width: 337px;
+  }
+}
+
+.acc-session {
+  &-header {
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    flex-wrap: nowrap !important;
+
+    h3 {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      flex-wrap: wrap-reverse !important;
+
+      h3{
+        max-width: 95% !important;
+        margin-top: 10px !important;
+      }
+    }
+
+    .button-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: auto;
+
+      & .ant-btn {
+        min-width: 220px;
+       }
+     
+
+
+      @media screen and (max-width: 800px) {
+        & .ant-btn {
+          max-width: 350px;
+          padding: 0px 0px;
+         }
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        & .ant-btn {
+          padding: 0px 20px;
+         }
+      }
+
+      @media screen and (max-width: 400px) {
+        margin-left: -10PX;
+      }
+    }
+  }
+
+  &-type {
+    @include app-font(14px, 19px);
+    color: $color-text-secondary;
+  }
+
+  &-date {
+    @include app-font(14px, 19px);
+    color: $color-text-secondary;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-time {
+    @include app-font(14px, 19px);
+    color: $color-text-secondary;
+    max-width: 280px;
+  }
+
+  &-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 900px) {
+       justify-content: center;
+    }
+  }
+
+  &-toggle {
+    display: flex;
+    align-items: center;
+    color: $color-accent;
+    @include app-font(16px, 21px, 600);
+    cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+     margin-top: 1rem;
+   }
+
+    &-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      min-width: 1, 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $color-accent;
+
+      &.hide {
+        transform: rotate(180deg);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
+  }
+
+  &-remove {
+    position: absolute !important;
+    right: 2rem;
+    top: 6rem;
+  }
+
+  &-added-tag {
+    width: 220px !important;
+    height: 28px;
+    border-radius: 100px;
+    background: $color-accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    @include app-font(14px, 19px);
+    position: absolute;
+    top: -14px;
+    left: 0px !important;
+  }
+
+  &-categories {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    & .specialty-item {
+      min-width: 290px !important;
+      max-width: auto !important;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100% !important;
+
+      & .specialty-item {
+        min-width: 330px !important;
+        max-width: auto !important;
+      }
+  
+    
+    }
+  }
+}
+
+.acc-details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid $color-border;
+  &-speaker {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+
+    &-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      & > .empty {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $color-text-third;
+      }
+    }
+
+    &-desc {
+      margin-top: 0.5rem;
+
+      h5 {
+        color: $color-text-secondary !important;
+      }
+    }
+  }
+}
+
+.custom-button-disabled{
+  color: rgba(0, 0, 0, 0.25) !important;
+    background: #f5f5f5 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border:  1px solid #d9d9d9 !important;
+}

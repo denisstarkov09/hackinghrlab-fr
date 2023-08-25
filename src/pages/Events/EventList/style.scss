@@ -1,0 +1,96 @@
+@import "styles/main.scss";
+
+.event-list, .event-list-event {
+  padding-top: 40px;
+  height: calc(100vh - 200px);
+  overflow: hidden scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $color-text-secondary;
+  }
+
+  &-filters {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 977.98px) {
+      display: flex;
+    }
+
+    @media (max-width: 575.98px) {
+      .custom-button {
+        width: 100%;
+      }
+    }
+  }
+
+  &-batch {
+    width: 45%;
+    display: block;
+
+    .date-avatar {
+      margin-bottom: 28px;
+    }
+
+    .ant-row {
+      width: 100%;
+    }
+
+  }
+}
+
+.event-list-event{
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  justify-content: flex-start;
+
+  .event-list-batch {
+    width: 90%;
+    display: block;
+    margin-bottom: 30px;
+
+    .date-avatar {
+      margin-bottom: 28px;
+    }
+
+    .ant-row {
+      width: 100%;
+    }
+
+  }
+}
+
+@media  (max-width: 1000px){
+  .event-list{
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &-batch {
+      width: 60%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media  (max-width: 700px){
+  .event-list{
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &-batch {
+      width: 100%;
+      margin-bottom: 40px;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'styles/main.scss';
+
+.activity-status-wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .activity-status-content {
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    width: 60%;
+  }
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 75%;
+  }
+
+  @media (min-width: 1536px) {
+    max-width: 1024px;
+  }
+
+  .resource-panel {
+    padding-left: 64px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .header-content {
+      margin-right: 5px;
+    }
+
+    .green-dot {
+      width: 10px;
+      height: 10px;
+      background-color: $color-success;
+      border-radius: 9999px;
+    }
+
+    .red-dot {
+      width: 10px;
+      height: 10px;
+      background-color: $color-error;
+      border-radius: 9999px;
+    }
+
+  }
+
+}

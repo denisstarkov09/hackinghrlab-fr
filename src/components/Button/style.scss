@@ -1,0 +1,165 @@
+@import "styles/main.scss";
+
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px !important;
+
+  &.primary:not([disabled]) {
+    background: $color-primary;
+    color: $color-white;
+    border: 1px solid $color-primary;
+
+    &:hover {
+      background: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  &.secondary:not([disabled]) {
+    background: $color-success;
+    color: $color-white;
+    border: 1px solid $color-success !important;
+
+    &:hover {
+      background: $color-white;
+      color: $color-success;
+    }
+  }
+
+  &.third:not([disabled]) {
+    background: $color-error;
+    color: $color-white;
+    border: 1px solid $color-error !important;
+
+    &:hover {
+      background: $color-white;
+      color: $color-error;
+    }
+  }
+
+  &.information:not([disabled]) {
+    background: $color-accent;
+    border: 1px solid $color-accent !important;
+    color: $color-white;
+
+    &:hover {
+      background: $color-white;
+      color: $color-accent;
+    }
+  }
+
+  &.primary.outlined:not([disabled]) {
+    background: $color-white !important;
+    border: 1px solid $color-primary !important;
+    color: $color-primary !important;
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &.secondary.outlined:not([disabled]) {
+    background: $color-white !important;
+    border: 1px solid $color-success !important;
+    color: $color-success !important;
+
+    &:hover {
+      background: $color-success;
+      color: $color-white;
+    }
+
+    &.xs {
+      font-weight: 500 !important;
+      padding: 0 13px !important;
+    }
+  }
+
+  &.third.outlined:not([disabled]) {
+    background: $color-white !important;
+    border: 1px solid $color-error !important;
+    color: $color-error !important;
+
+    &:hover {
+      background: $color-error !important;
+      color: $color-white !important;
+    }
+  }
+
+  &.information.outlined:not([disabled]) {
+    background: $color-white !important;
+    border: 1px solid $color-white !important;
+    color: $color-accent !important;
+
+    &:hover {
+      background: $color-accent;
+      color: $color-white;
+    }
+  }
+
+  &.secondary.no-border {
+    background: $color-white !important;
+    border: none !important;
+    color: $color-success !important;
+
+    &:hover {
+      background: $color-success;
+      color: $color-white;
+    }
+
+    &.xs {
+      font-weight: 500 !important;
+      padding: 0 13px !important;
+    }
+  }
+
+  &.remove {
+    background: $color-background !important;
+    border: 1px solid $color-border !important;
+    color: $color-text-third !important;
+    border-radius: 4px;
+
+    &:hover {
+      background: $color-white !important;
+      color: $color-error !important;
+      border: 1px solid $color-error !important;
+    }
+
+    &.xs {
+      font-weight: 500 !important;
+      padding: 0 13px !important;
+    }
+  }
+
+  &.xs {
+    height: 28px;
+    padding: 0 39px;
+    @include app-font(14px, 19px, 600);
+  }
+
+  &.sm {
+    height: 2rem;
+    padding: 0 39px;
+    @include app-font(14px, 19px, 600);
+  }
+
+  &.md {
+    height: 2.25rem;
+    padding: 0 36px;
+    @include app-font(16px, 21px, 600);
+  }
+
+  &.lg {
+    height: 40px;
+    padding: 0 31px;
+    @include app-font(20px, 26px, 600);
+  }
+
+  &.xl {
+    height: 44px;
+    padding: 0 31px;
+    @include app-font(20px, 26px, 600);
+  }
+}

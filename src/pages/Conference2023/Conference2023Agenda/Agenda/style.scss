@@ -1,0 +1,171 @@
+@import "../../../../styles/main.scss";
+
+.container-agenda-data{
+    width: 100%;
+    padding: 20px;
+    height: auto;
+
+    .title-date{
+        padding: 0px;
+        padding-top: 30px;
+        padding-left: 0px;
+        transform: translateX(-10px) translateY(18px);
+        width: 96%;
+        font-size: 28px;
+        margin: 0px;
+        font-weight: bold;
+        position: relative;
+
+        .container-arrow-title{
+            position: absolute;
+            width: 34px;
+            height: 100%;
+            top: 28px;
+            left: -35px;
+            perspective: 200;
+
+            .arrow-title{
+                width: 22px;
+                height: 34px;
+                top: 20px;
+                left: -38px;
+                transform: rotateZ(0deg) rotateY(0deg);
+                transition: all 0.5s ease-in-out;
+            }
+
+            .arrow-title-change{
+                width: 22px;
+                height: 34px;
+                top: 20px;
+                left: -38px;
+                transform: rotateZ(-90deg) rotateY(180deg);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+
+    @media (max-width: 550px) {
+        .title-date{
+            transform: translateX(10px) translateY(18px);
+        }
+    }
+
+    @media (max-width: 450px) {
+        .title-date{
+            transform: translateX(50px) translateY(18px);
+        }
+    }
+
+    .container-collapse-title{
+        height: auto;
+        clip-path: polygon(-15% 0%, 115% 0%, 115% 100%, -15% 100%);
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .container-collapse-title-change{
+        height: auto;
+        clip-path: polygon(-15% 0%, 115% 0%, 115% 0%, -15% 0%);
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .data-height{
+        position: relative;
+        top: 0px;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .space-around{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .ajust-contain{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .content-collapse{
+        .title-collapse{
+            color: #404040;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 42px;
+            margin: 0px;
+            margin-bottom: 15px;
+        }
+
+        .content-information{
+            display: flex;
+            width: auto;
+            height: auto;
+            flex-direction: row;
+
+            .content-first-information{
+                width: 300px;
+                position: relative;
+                margin-bottom: 0px;
+                height: auto;
+    
+                .p-content{
+                    font-style: normal;
+                    font-weight: 450;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #999999;
+                    margin: 0px;
+                    margin-bottom: 5px;
+    
+                    .date, .date2{
+                        position: absolute;
+                        right: 25px;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: #404040;
+                    }
+
+                    .date2{
+                        width: 180px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        text-align: end;
+                    }
+
+                    .date-panels{
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: #404040;
+                    }
+
+                    @media (max-width: 550px) {
+                        .date, .date2{
+                            right: 20px;
+                        }
+                    }
+
+                } 
+            }
+        }
+    }
+
+}
+
+@media (max-width: 550px) {
+    .container-agenda-data{
+        padding: 0px;
+        padding-left: 0px;
+    }
+  }

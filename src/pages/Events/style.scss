@@ -1,0 +1,150 @@
+@import "styles/main.scss";
+
+.events-page {
+  width: 100%;
+  background: $color-background;
+  display: flex;
+  position: relative;
+
+  &-filter {
+    width: 266px;
+    height: calc(100vh - 72px);
+    background: $color-white;
+    box-shadow: 4px 0px 14px #37215714;
+
+    @media (max-width: 977.98px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 99;
+
+      &:not(.visible) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    padding: 1rem;
+    overflow: auto;
+    display: flex;
+    height: calc(100vh - 72px);
+    width: 100%;
+
+    @media (max-width: 1199.98px) {
+      padding: 3rem 3rem;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &-container {
+    width: 904px;
+
+    @media (max-width: 575.98px) {
+      .ant-tabs-nav-list {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        width: 100%;
+
+        .ant-tabs-tab {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          .ant-tabs-tab-btn {
+            white-space: normal;
+            @include app-font(16px, 24px, 600);
+            text-align: center;
+          }
+        }
+      }
+
+      .ant-tabs-nav-operations {
+        display: none;
+      }
+    }
+
+    // Small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) {
+    }
+
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+    }
+
+    // Large devices (desktops, less than 1200px)
+    @media (max-width: 1199.98px) {
+      width: 100%;
+    }
+  }
+}
+
+.event-certificate {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+
+.events-advertisement-wrapper {
+  margin-top: 0px;
+  margin-left:15px;
+
+  &-preview {
+    margin-top: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .advertisement {
+      width: 275px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 275px;
+      cursor: pointer;
+
+      &-img {
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  &-content {
+    margin-top: 10px;
+    display: block;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    
+    .advertisement {
+      width: 275px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 275px;
+      cursor: pointer;
+
+      &-img {
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+      }
+    }
+  }
+}

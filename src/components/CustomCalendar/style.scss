@@ -1,0 +1,105 @@
+@import "styles/main.scss";
+
+.custom-calendar {
+  .ant-picker-panel {
+    border: none !important;
+  }
+
+  .ant-picker-content {
+    display: block;
+    height: fit-content !important;
+
+    th {
+      color: $color-text-third;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &-date {
+      @include app-font(14px, 30px, 600);
+      color: $color-text-primary;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 12px;
+        cursor: pointer;
+      }
+
+      &.disabled {
+        img {
+          cursor: not-allowed;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  svg.ionicon {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+  }
+
+  .ant-picker-cell {
+    opacity: 0;
+
+    &.ant-picker-cell-in-view {
+      opacity: 1;
+
+      .ant-picker-calendar-date-value {
+        color: $color-text-primary;
+      }
+
+      .ant-picker-calendar-date-today {
+        border: 1px solid $color-primary;
+        background: transparent;
+        border-radius: 4px;
+
+        .ant-picker-calendar-date-value {
+          color: $color-primary;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &.ant-picker-cell-selected .ant-picker-cell-inner {
+      background: $color-primary;
+      border: 1px solid $color-primary;
+      border-radius: 4px;
+
+      .ant-picker-calendar-date-value {
+        color: $color-white !important;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &-control.disabled {
+    .ant-picker-calendar-date-value {
+      color: $color-text-third !important;
+      // opacity: 0.3;
+    }
+  }
+
+  &-today {
+    width: 100%;
+  }
+}

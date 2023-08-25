@@ -1,0 +1,96 @@
+.job-board-details-page {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.job-board-details-wrapper {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1536px) {
+    width: 60%;
+  }
+}
+
+.back-to-job-board {
+  width: 20%;
+}
+
+.job-board-details-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+    .company-logo {
+      margin-top: 1rem;
+      object-fit: contain;
+      max-height: 100px;
+      width: 100%;
+    }
+}
+
+.section2 {
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.section3 {
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.section4 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.preferred-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.job-board-detail-page-header-content-back-btn {
+  margin-bottom: 1rem;
+
+  .job-board-detail-page-header-content-back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+
+    .job-board-detail-page-header-content-back-img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.recruiter {
+  margin-top: 1rem;
+}

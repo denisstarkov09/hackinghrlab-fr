@@ -1,0 +1,76 @@
+@import "styles/main.scss";
+
+.bonfires-page{
+  width: 100%;
+  display: flex;
+
+  &-container{
+    width: 100%;
+    padding: 1rem 0rem;
+
+    .menu-bonfires{
+      background: none;
+
+      .menu-bonfires-item, .menu-bonfires-item-without{
+        font-size: 1.2rem;
+        margin: 0px;
+      }
+
+      .menu-bonfires-item:hover,
+      .ant-menu-item-selected,
+      .menu-bonfires-item:active {
+        border-bottom: 2px solid $color-primary !important;
+        color: $color-primary !important;
+      }
+    }
+
+  .bonfire-filter-panel{
+    width: 95%;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    display: none;
+
+    @media  (max-width: 900px){
+      display: block;
+      margin-left: 0px;
+     }
+   
+  }
+  }
+  .bonfire-list {
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    &-header {
+      display: flex;
+      justify-content: flex-end;
+  
+      &-select {
+        display: flex;
+        align-items: center;
+      }
+  
+      &-sort {
+        margin-left: 1rem;
+        max-width: 200px;
+      }
+    }
+  
+    &-container {
+      margin: 2rem 3rem;
+      grid-template-columns: 1fr;  
+      @media (max-width: 500px) {
+        margin: 2rem 0rem;
+      }
+
+    }
+  }
+  
+
+}

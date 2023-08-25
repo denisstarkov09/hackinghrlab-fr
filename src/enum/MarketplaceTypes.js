@@ -1,0 +1,3 @@
+export default {
+  OPEN_FILTER_PANEL: "MARKETPLACE_OPEN_FILTER_PANEL",
+};

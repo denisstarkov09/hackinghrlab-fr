@@ -1,0 +1,49 @@
+@import "styles/main.scss";
+
+.event-filter-panel {
+  width: 266px;
+  height: calc(100vh - 72px);
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 56px 2rem 2rem;
+  z-index: 9;
+  overflow: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-allevents {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 18px;
+    display: none !important;
+
+    @media (max-width: 977.98px) {
+      display: inline-block !important;
+    }
+  }
+
+  .custom-calendar {
+    margin-bottom: 1rem;
+  }
+
+  .search-filter {
+    & > .ant-checkbox-group {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+
+      .ant-checkbox-wrapper {
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}

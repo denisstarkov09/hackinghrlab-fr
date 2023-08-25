@@ -1,0 +1,143 @@
+@import "styles/main.scss";
+
+.skill-cohort-certificate-page-wrapperr-learning {
+    width: 1000px;
+    height: auto;
+    padding: 20px 84px;
+    border: 1px solid $color-border;
+    background: rgb(26, 56, 82);
+    border-radius: 0.5rem;
+    box-shadow: 4px 0px 14px #37215714;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    position:absolute;
+    left:-10000px;
+    top:auto;
+
+    .certificate {
+    width: 100%;
+
+    &-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid $color-disabled;
+    }
+
+    &-logo {
+        width: 72px;
+        min-width: 72px;
+        max-width: 72px;
+        height: 72px;
+        overflow: hidden;
+
+        img {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        }
+    }
+
+    &-title {
+        @include app-font(28px, 48px, 600);
+        color: $color-white !important;
+        margin: 24px 0 20px !important;
+    }
+
+    &-username {
+        @include app-font(40px, 48px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+    }
+
+    &-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 0 14px;
+    }
+
+    &-text1 {
+        @include app-font(22px, 19px);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+        text-align: center;
+
+        &.duration {
+        text-transform: capitalize;
+        }
+
+        &.signature {
+        white-space: nowrap;
+        }
+
+        &.organizer {
+        text-transform: capitalize;
+        }
+    }
+
+    &-text2 {
+        @include app-font(24px, 24px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+        text-align: center;
+    }
+
+    &-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-sign {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        .certificate-text1.date {
+            height: 3rem;
+            margin-bottom: 8px !important;
+            display: flex;
+            align-items: flex-end;
+        }
+        }
+
+        &-image {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        margin: 0 56px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        }
+    }
+
+    &-divider {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $color-disabled;
+        margin-bottom: 10px;
+    }
+
+    &-signature {
+        width: 90px;
+        height: 3rem;
+        margin-bottom: 0.5rem;
+
+        img {
+        width: 90px;
+        object-fit: cover;
+        }
+    }
+    }
+}

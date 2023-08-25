@@ -1,0 +1,217 @@
+.container-messages-general {
+  width: 100% ;
+  height: 100vh ;
+  top: 0px ;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.593);
+  position: fixed;
+  z-index: 800;
+  transition: 0.2s all ease-in-out ;
+  left: 0px;
+
+  .messages{
+      background: #FE5621;
+      padding: 15px 50px;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+  }
+}
+
+.container-conference-agenda{
+    overflow: hidden scroll;
+    height: 100vh;
+    margin-top: 90px;
+    background: #FFFFFF;
+
+    .imagen-agenda{
+        position: relative;
+        width: 108%;
+        height: 50vh;
+        background-image: #10253f;
+        background-size: 100% 100%;
+        background-blend-mode: soft-light;
+        background-color: #10253f;
+        transform: translateX(-7%);
+        background-position: center 0%;
+        background-repeat: no-repeat;
+
+        .container-content-picture-agenda{
+          position: absolute;
+          top: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 93.5%;
+          right: 0px;
+          height: 100%;
+  
+          .title-containers{
+              padding-top: 0px;
+              padding-bottom: 20px;
+              width: 100%;
+              text-align: center;
+              font-size: 70px;
+              font-family: 'Segoe UI';
+              margin: 0px;
+              font-weight: bold;
+              color: white;
+          }
+      }
+    }
+  
+    .containers-agenda{
+        width: 100%;
+        padding:0px 80px;
+        height: auto;
+        margin-bottom: 130px;  
+        overflow: hidden;
+
+        .container-sessions-agenda{
+          display: flex;
+          flex-direction: row;
+          margin-top: 40px;
+          
+          .p1-agenda{
+            margin: 0px;
+            padding: 0px;
+            color: #FE5621;
+            width: 255px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          div{
+            width: 4px;
+            margin-top: 5px;
+            height: 30px;
+            border-left: 2px solid #FE5621;
+            margin-left: 5px;
+            margin-right: 10px;
+          }
+
+          .p2-agenda{
+            margin: 0px;
+            padding: 0px;
+            color: #FE5621;
+            width: 150px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+
+        @media (max-width: 700px) {
+          .container-sessions-agenda{
+            justify-content: center;
+            .p1-agenda, .p2-agenda{
+              width: auto;
+              text-align: center;
+            }
+            .p1-agenda{
+              margin-right: 10px;
+            }
+          }
+        }
+
+        @media (max-width: 600px) {
+          .container-sessions-agenda{
+            flex-direction: column;
+            .p1-agenda, .p2-agenda{
+              width: auto;
+              text-align: center;
+            }
+            div{
+              display: none;
+            }
+            .p1-agenda{
+              margin-right: 0px;
+            }
+          }
+        }
+
+    }
+
+    @media (max-width: 550px) {
+      .containers-agenda{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 80px;
+      }
+    }
+  
+    @media (max-width: 450px) {
+      .containers-agenda{
+        padding-left: 0px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+      }
+    }
+
+    .footer-home{
+        width: 100%;
+        height: auto;
+        background: #10253F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:40px ;
+        padding-bottom: 100px;
+    
+        .logo-footer{
+          width: 60px;
+          height: 60px;
+          background-image: url("../../../images/img-hhr-logo.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          margin-bottom: 50px;
+        }
+    
+        .container-link-footer{
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-bottom: 30px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    
+          .p-link-footer{
+            margin: 0px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            text-decoration-line: none;
+          }
+    
+          .p-link-footer:hover {
+            text-decoration: none;
+            text-decoration-line: none;
+          }
+        }
+    
+        .reserved{
+          margin: 0px;
+          width: 100%;
+          margin-top: 30px;
+          font-style: normal;
+          font-weight: 300;
+          text-align: center;
+          font-size: 12px;
+          line-height: 16px;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+  }

@@ -1,0 +1,73 @@
+@import "styles/main.scss";
+
+.form-message-mobile-container{
+    background: $color-background-dark;
+    border-top: 1px solid $color-border;
+    width: 100%;
+    max-width: 100%;
+
+    .files-upload-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5px;
+
+        .file-not-image{
+            display: flex;
+            width: 80px;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+            background: $color-white;
+            box-shadow: 0px 0px 1px #000;
+            border-radius: 5px;
+
+            .file-image{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 90%;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+        }
+
+        .file-name{
+            max-width: 80px;
+            max-height: 50px;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .form-message-mobile{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+
+        .form-message-mobile-textarea{
+          resize:none;
+          min-width: 200px; 
+          width: 90%;
+          max-width: 400px; 
+          border-radius: 5px;
+        }
+        
+    }
+
+    .button-send-message{
+        background: $color-primary !important;
+        color: #fff !important;
+        transition: all ease 300ms !important;
+        
+        &:hover,&:focus{
+            border-color: $color-primary !important;
+        }
+    }
+
+    .ant-form-item{
+    margin-bottom: 0 !important;
+}
+    
+}
+
+

@@ -1,0 +1,26 @@
+@import "styles/main.scss";
+
+.auth-alert {
+  background: $color-white 0% 0% no-repeat padding-box;
+  border: 1px solid $color-primary;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 24px;
+
+  h3 {
+    color: $color-primary !important;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-align: center;
+    margin-bottom: 24px !important;
+  }
+
+  p {
+    @include app-font(14px, 21px);
+    color: $color-text-secondary;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-align: left;
+    margin: 0;
+  }
+}

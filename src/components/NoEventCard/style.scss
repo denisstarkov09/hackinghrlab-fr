@@ -1,0 +1,39 @@
+@import "styles/main.scss";
+
+.no-event-card {
+  width: 100%;
+  height: 190px;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+
+  &-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-desc {
+    @include app-font(26px, 39px);
+    color: $color-text-third;
+    margin-top: 1.5rem;
+    text-align: center;
+
+    @media (max-width: 767.98px) {
+      @include app-font(20px, 30px);
+    }
+  }
+}

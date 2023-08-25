@@ -1,0 +1,69 @@
+@import "styles/main.scss";
+
+.custom-drawer {
+  z-index: 999;
+
+  .ant-drawer-mask {
+    background: #3c475252 !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    box-shadow: -4px 0px 14px #37215714 !important;
+    border: 1px solid $color-border !important;
+  }
+
+  .ant-drawer-header {
+    padding: 20px 2rem !important;
+    border-bottom: 1px solid $color-border !important;
+  }
+
+  .ant-drawer-close {
+    height: 100% !important;
+    padding-right: 32px;
+
+    .anticon.anticon-close {
+      font-size: 20px !important;
+      color: $color-text-primary !important;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 18px;
+    right: 34px;
+    font-size: 24px;
+    color: $color-text-primary;
+    cursor: pointer;
+  }
+
+  &.no-header {
+    .ant-drawer-header {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+
+    .ant-drawer-header {
+      padding: 20px 1rem !important;
+    }
+
+    .custom-drawer-close {
+      width: 30px;
+      height: 30px;
+      top: 22px;
+      right: 22px;
+      font-size: 16px;
+    }
+  }
+}

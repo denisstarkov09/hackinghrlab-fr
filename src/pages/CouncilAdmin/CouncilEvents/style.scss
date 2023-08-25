@@ -1,0 +1,267 @@
+@import "styles/main.scss";
+
+.collapse-search-email-draft,
+.collapse-search-email-draft2 {
+  width: 200px;
+  height: 45px;
+  background: white;
+  position: absolute;
+  top: -44px;
+  left: 0px;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+
+  .arrow {
+    width: 18px;
+    height: 28px;
+    margin-right: 10px;
+    transform: translateY(1px) rotateZ(0deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .arrow-collapse {
+    width: 18px;
+    height: 28px;
+    margin-right: 10px;
+    transform: translateY(1px) rotateZ(90deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .p-collapse-emails {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #3C4752;
+  }
+}
+
+.collapse-search-email-draft2 {
+  left: 210px;
+}
+
+.all-email-draft,
+.all-email-draft-collapse {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  max-height: 50%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  .container-dat,
+  .container-dat-send {
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+
+    .header-option-email-draft {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      padding-left: 30px;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-color: #D9D1D1;
+      background: #FE5621;
+      color: white;
+      font-weight: bold;
+    }
+
+    .header-action,
+    .header-action-send,
+    .header-action-send2 {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 20px;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-color: #D9D1D1;
+      width: 280px;
+      background: #FE5621;
+      color: white;
+      font-weight: bold;
+    }
+
+    .header-action-send2 {
+      width: 220px;
+    }
+
+    .container-option-email-draft {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      padding: 10px;
+      padding-left: 30px;
+      flex-grow: 1;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-color: #D9D1D1;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .section-exit {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+    }
+
+    .container-action,
+    .container-data-send,
+    .container-data-send2 {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 20px;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-color: #D9D1D1;
+      width: 280px;
+    }
+
+    .container-data-send {
+      width: 220px;
+    }
+
+
+    @media (max-width: 700px) {
+
+      .container-action,
+      .container-data-send,
+      .container-data-send2,
+      .header-action,
+      .header-action-send,
+      .header-action-send2 {
+        width: 150px;
+      }
+    }
+  }
+
+  .container-dat-send:hover {
+    background: #e9e9e9;
+  }
+}
+
+.all-email-draft-collapse {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.background-fond-collapse,
+.background-fond {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  z-index: 9;
+}
+
+.background-fond-collapse {
+  background: rgba(0, 0, 0, 0.382);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.message-required {
+  color: rgb(255, 125, 125);
+}
+
+.council-events-wrapper {
+  margin-top: 1rem;
+
+  .council-event-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .council-event-card {
+      background-color: white;
+      box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+      height: 345px;
+      width: 350px;
+      max-height: 345px;
+      max-width: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+
+      &:hover {
+        box-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+      }
+    }
+
+    .council-event-card2 {
+      background-color: white;
+      box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+      height: 345px;
+      width: 350px;
+      max-height: 345px;
+      max-width: 350px;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+      }
+
+      &-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.add-panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-btns {
+  display: flex;
+  width: 100%;
+}
+
+.truncate {
+  word-break: break-all;
+}
+
+.titulo-card-e {
+  text-align: 'left';
+  @include app-font(22px, 22px, 600);
+}
+
+.display-panel {
+  height: 500px;
+  overflow-y: auto;
+}

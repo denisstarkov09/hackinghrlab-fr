@@ -1,0 +1,39 @@
+@import "styles/_colors.scss";
+@import "styles/_mixins.scss";
+
+.micro-conference__player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid #e1e2ee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: $color-white;
+}
+
+.micro-conference__react-player {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  > div iframe {
+    opacity: 0;
+
+    &[data-ready="true"] {
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+}
+
+.micro-conference__player-loading {
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

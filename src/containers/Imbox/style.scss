@@ -1,0 +1,76 @@
+@import "styles/main.scss";
+
+.imbox-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.imbox-content {
+  // width: 350px;
+  max-width: 400px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+
+  .loading-container {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.messages-not-viewed{
+  position: relative;
+  &::after{
+      content: "";
+      width: 14px;
+      height: 14px;
+      top: 10px;
+      right: 5px;
+      border-radius: 50%;
+      position: absolute;
+      background: $color-accent;
+      border: 1px solid $color-border;
+  }
+}
+
+.imbox-conversation{
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    padding: 5px 20px;
+    align-items: center;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+
+    &:hover{
+        background: $color-background-dark;
+        border-radius: 5px;
+    }
+
+    .avatar-container{
+        position: relative;
+        &::after{
+            content: "";
+            width: 14px;
+            height: 14px;
+            bottom: 2px;
+            right: 12px;
+            border-radius: 50%;
+            position: absolute;
+            background: $color-success;
+            border: 1px solid $color-border;
+        }
+    }
+
+}
+
+.name-user{
+    color: $color-text-primary;
+    font-weight: 600;
+}
+
+.conversation-text{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 50px;
+}

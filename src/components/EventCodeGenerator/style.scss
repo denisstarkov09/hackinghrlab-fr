@@ -1,0 +1,23 @@
+@import "styles/main.scss";
+
+.code-generator {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid #dddddd;
+  width: fit-content;
+  padding: 0 1rem;
+  border-radius: 8px;
+
+  &-value {
+    width: 100px;
+    @include app-font(18px, 16px, 400);
+    color: $color-text-secondary;
+  }
+  
+  img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,35 @@
+@import "styles/main.scss";
+
+.premium-alert-modal {
+  .ant-modal-body {
+    padding: 0;
+  }
+
+  .ant-modal-content {
+    border-radius: 0.5rem;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  &-content {
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    background: $color-primary;
+    text-align: center;
+    width: 100%;
+
+    h3 {
+      color: $color-white !important;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 1rem;
+
+      h3 {
+        @include app-font(16px, 21px, 600);
+      }
+    }
+  }
+}

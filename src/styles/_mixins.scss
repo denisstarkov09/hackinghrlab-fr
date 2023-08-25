@@ -1,0 +1,7 @@
+@mixin app-font($size, $line-height, $weight: normal, $style: normal) {
+  font-family: "Roboto", sans-serif !important;
+  font-style: $style !important;
+  font-weight: $weight !important;
+  font-size: $size !important;
+  line-height: $line-height !important;
+}

@@ -1,0 +1,51 @@
+@import "styles/main.scss";
+
+.post-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  overflow: auto;
+  position: relative;
+  background-color: $color-white;
+
+  @media (max-width: 575.98px) {
+    padding:10px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &-container {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    &--header-button-section{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 575.98px) {
+        margin-left: 10px;
+      }
+
+    }
+
+    &--comments-container{
+      padding: 1rem;
+      background-color: $color-white;
+      
+      &--empty-message{
+        text-align: center;
+        color: $color-text-secondary;
+        font-weight: 700;
+      }
+    }
+  }
+}

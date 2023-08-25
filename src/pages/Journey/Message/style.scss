@@ -1,0 +1,26 @@
+@import "styles/main.scss";
+
+.learning-journey-message {
+  width: 100%;
+  background-color: $color-white;
+  height: 336px;
+  border-radius: 8px;
+  box-shadow: 4px 0px 7px #37215714;
+  opacity: 1;
+  padding: 3rem;
+  border: 1px solid $color-border;
+  text-align: center;
+
+  h3:first-child {
+    margin-top: 1rem !important;
+  }
+
+  h3 {
+    font-weight: normal !important;
+    margin-bottom: 3rem !important;
+    font-size: 26px !important;
+  }
+  button {
+    margin-top: 1rem;
+  }
+}

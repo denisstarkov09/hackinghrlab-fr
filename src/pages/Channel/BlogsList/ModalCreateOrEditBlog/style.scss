@@ -1,0 +1,29 @@
+.ant-picker-panel-container {
+    .ant-picker-panel {
+        .ant-picker-datetime-panel {
+            .ant-picker-time-panel {
+                .ant-picker-header {
+                    width: 170px;
+                }
+
+                .ant-picker-content ul li div {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .ant-picker-content ul:nth-child(2) {
+
+                    display: none;
+
+                }
+
+                .ant-picker-content ul:nth-child(3) {
+
+                    display: none;
+
+                }
+            }
+
+        }
+    }
+}

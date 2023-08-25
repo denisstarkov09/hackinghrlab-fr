@@ -1,0 +1,151 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./components/menu.scss";
+@import "./components/popover.scss";
+@import "./fonts";
+
+// Text Scale
+h1 {
+  @include app-font(32px, 43px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+h2 {
+  @include app-font(26px, 34px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+h3 {
+  @include app-font(20px, 26px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+h4 {
+  @include app-font(16px, 21px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+h5 {
+  @include app-font(14px, 19px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+h6 {
+  @include app-font(12px, 16px, 600);
+  color: $color-text-primary !important;
+  margin: 0 !important;
+}
+
+// flex
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
+}
+
+.items-end {
+  align-items: flex-end !important;
+}
+
+.items-baseline {
+  align-items: baseline !important;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+// font
+.font-bold {
+  font-weight: bold !important;
+}
+
+.font-regular {
+  font-weight: 500 !important;
+}
+
+.font-medium {
+  font-weight: 600 !important;
+}
+
+// colors
+.color-primary {
+  color: $color-primary !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.wrapperLarge {
+  border: 1px solid $color-border !important;
+  margin-bottom: 2em;
+  
+  .textWrapperLarge {
+    border-bottom: 1px solid $color-border;
+    .siteNameLinkWrapper {
+      color: $color-text-primary !important;
+      text-align: left !important;
+      font-size: 16px !important;
+    }
+    .titleWrapper {
+      color: $color-text-primary !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      font-weight: bold;
+    }
+    p {
+      text-align: left !important;
+      color: $color-text-secondary;
+      font-size: 14px !important;
+    }
+  }
+}

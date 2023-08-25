@@ -1,0 +1,15 @@
+@import "styles/main.scss";
+
+.no-page-found {
+  width: 100%;
+  height: calc(100vh - 72px);
+  background: $color-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-title {
+    @include app-font(32px, 24px, bold);
+    margin-bottom: 36px;
+  }
+}

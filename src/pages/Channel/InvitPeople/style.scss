@@ -1,0 +1,114 @@
+.container-users-invit{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: #d4d4d4 solid 1px;
+    height: 80px;
+
+    .container-data-member-invit{
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+
+        .box-select{
+            border: #b3b3b3 solid 2px;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            min-height: 25px;
+            min-width: 25px;
+
+            .box-inner-select{
+                width: 25px;
+                height: 25px;
+                border-radius: 3px;
+                background: #FE5621;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                position: absolute;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+        .container-p-invit{
+            display: flex;
+            width: auto;
+            height: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .container-name-invit-people{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+
+                .p-title-conference-invit{
+                    margin: 0px;
+                    padding: 0px;
+                    line-height: 28px;
+                    color: #000000;
+                    max-width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: start;
+                    margin-left: 10px;
+                    font-size: 18px;
+                }
+
+                .tag-ready-follow{
+                    color: green;
+                    font-size: 16px;
+                    margin: 0px;
+                    padding: 0px;
+                    padding-top: 1px;
+                    padding-left: 6px;
+                }
+
+                .tag-limit-follow{
+                    color: #FE5621;
+                    font-size: 16px;
+                    margin: 0px;
+                    padding: 0px;
+                    padding-top: 1px;
+                    padding-left: 6px;
+                }
+            }
+
+            .p-profession-conference-invit{
+                margin: 0px;
+                padding: 0px;
+                width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: start;
+                margin-left: 10px;
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.6);
+            }  
+        }
+        
+    }
+
+    
+
+    .button-speaker-invit{
+        width: auto;
+    }
+}

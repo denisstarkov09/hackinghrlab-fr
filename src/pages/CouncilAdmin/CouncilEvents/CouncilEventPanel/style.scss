@@ -1,0 +1,15 @@
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panelist {
+  text-align: center;
+  margin-right: 1rem;
+  width: 200px;
+  margin-bottom: 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}

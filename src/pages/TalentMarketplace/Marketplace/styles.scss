@@ -1,0 +1,59 @@
+@import "styles/main.scss";
+
+.speaker-list {
+  width: 100%;
+  padding: 1rem;
+  max-height: calc(100vh - 4.5rem - 66px);
+  overflow-y: auto;
+
+  @media (max-width: 1100px){
+    padding-top: 16rem;
+  } 
+
+  @media (max-width: 800px){
+    padding-top: 15rem;
+  } 
+
+  @media (max-width: 500px){
+    padding-top: 16rem;
+  } 
+
+  @media (max-width: 400px){
+    padding-top: 14rem;
+    width: 1200px;
+  } 
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+
+  &-container {
+    width: 95%;
+    display: grid;
+    height: auto;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    @media (max-width: 1100px){
+      width: 100%;
+    }
+
+    @media (max-width: 800px){
+      width: 650px;
+    }
+
+    @media (max-width: 500px){
+      width: 400px;
+    }
+
+    @media (max-width: 400px){
+      width: 300px;
+    }
+
+  }
+  .pagination {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}

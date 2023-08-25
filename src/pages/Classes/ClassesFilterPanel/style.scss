@@ -1,0 +1,34 @@
+@import "styles/_colors.scss";
+
+.classes-filter-panel {
+  width: 266px;
+  height: calc(100vh - 72px);
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 44px 2rem 2rem;
+  z-index: 9;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-share {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .search-filter {
+    margin-top: 36px;
+
+    & > .ant-checkbox-group {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+
+      .ant-checkbox-wrapper {
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}

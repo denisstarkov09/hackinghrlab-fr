@@ -1,0 +1,80 @@
+@import "styles/main.scss";
+
+.custom-radio {
+  display: flex !important;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+
+  .ant-radio-inner {
+    width: 28px;
+    height: 28px;
+  }
+
+  &.md {
+    .ant-radio-inner {
+      width: 28px;
+      height: 28px;
+    }
+
+    &.ant-radio-wrapper-checked {
+      .ant-radio-inner::after {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $color-primary;
+      }
+    }
+  }
+
+  &.sm {
+    .ant-radio-inner {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.ant-radio-wrapper-checked {
+      .ant-radio-inner::after {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $color-primary;
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  .ant-radio-inner {
+    border: 2px solid $color-border;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: $color-white;
+  }
+
+  &.primary.ant-radio-wrapper-checked {
+    .ant-radio-inner {
+      background: $color-white;
+      border: 2px solid $color-primary;
+    }
+  }
+
+  &.md > span:last-child {
+    padding-left: 1rem !important;
+    @include app-font(20px, 30px);
+    color: $color-text-secondary;
+
+    @media (max-width: 575.98px) {
+      @include app-font(16px, 30px);
+    }
+  }
+
+  &.sm > span:last-child {
+    padding-left: 1rem !important;
+    @include app-font(14px, 30px);
+    color: $color-text-secondary;
+  }
+}

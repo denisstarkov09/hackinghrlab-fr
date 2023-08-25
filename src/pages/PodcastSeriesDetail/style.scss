@@ -1,0 +1,155 @@
+@import "styles/main.scss";
+
+.podcast-series-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+
+  &-container {
+    height: calc(100vh - 72px);
+    background: $color-background;
+    overflow: auto;
+    padding: 4rem;
+    position: relative;
+  }
+
+  .podcastseries-certificate {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &-back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+
+    &-img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-label {
+    margin-top: 3rem !important;
+  }
+
+  &-value {
+    margin-top: 1rem !important;
+    color: $color-text-secondary !important;
+    font-weight: 500 !important;
+    max-width: 1000px;
+  }
+
+  &-list {
+    margin-top: 3rem !important;
+    padding-top: 3rem;
+    border-top: 1px solid $color-border;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    margin-bottom: 44px;
+
+    @media (max-width: 1023.98px) {
+      margin: 0 4rem 44px;
+      justify-items: center;
+    }
+
+    @media (max-width: 767.98px) {
+      margin: 0 1rem 44px;
+      grid-row-gap: 42px;
+      grid-column-gap: 1rem;
+    }
+
+    .podcast-episode__card {
+      min-width: 260px;
+    }
+  }
+
+  &-firewall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3c475252;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .upgrade-notification-panel {
+      padding: 1rem 3rem;
+      border-radius: 0.5rem;
+      background: $color-primary;
+      text-align: center;
+      width: fit-content;
+
+      h3 {
+        color: $color-white !important;
+      }
+
+      @media (max-width: 575.98px) {
+        padding: 1rem;
+
+        h3 {
+          @include app-font(16px, 21px, 600);
+        }
+      }
+    }
+  }
+}
+
+.podcast-claim-modal {
+  padding-left: 1rem;
+
+  h5 {
+    margin-bottom: 1rem !important;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+}
+
+.podcast-series-panel {
+  width: 266px;
+  height: calc(100vh - 72px);
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 44px 0 2rem;
+  z-index: 9;
+  overflow: auto;
+
+  & > .font-regular {
+    padding-left: 2rem;
+  }
+
+  &-container {
+    margin-top: 2rem;
+  }
+
+  .podcast-series-item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-right: 3px solid $color-white !important;
+
+    &:hover,
+    &.active {
+      background-color: $color-background-dark !important;
+      border-right: 3px solid $color-primary !important;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "styles/main.scss";
+
+.specialty-item {
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 0.25rem;
+  @include app-font(14px, 19px);
+  cursor: pointer;
+  border: 1px solid $color-text-third;
+  color: $color-text-third;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.active {
+    border: 1px solid $color-accent;
+    color: $color-accent;
+  }
+}

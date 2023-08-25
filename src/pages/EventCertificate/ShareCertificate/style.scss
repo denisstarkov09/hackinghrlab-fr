@@ -1,0 +1,290 @@
+@import "styles/main.scss";
+
+.certificate-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+  overflow: auto;
+  padding: 60px 0;
+  background: $color-white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    height: 193px;
+    width: 100%;
+    max-height: 193px;
+    background: #f5f5f8;
+    position: relative;
+  
+    &-content {
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%;
+      padding-top: 25px;
+  
+      &-back {
+        display: flex;
+        margin-top: 50px;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        width: fit-content;
+
+        &-btn {
+          width: 100%;
+          padding-left: 35px;
+        }
+  
+        &-img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: 0.5rem;
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  &-wrapper {
+    width: 1000px;
+    min-height: 700px;
+    padding: 0 84px;
+    border: 1px solid $color-border;
+    background: rgb(26, 56, 82);
+    border-radius: 0.5rem;
+    box-shadow: 4px 0px 14px #37215714;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    left: 0px;
+    position: relative;
+
+    
+    .certificate {
+      width: 100%;
+  
+      &-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid $color-disabled;
+      }
+  
+      &-logo {
+        width: 72px;
+        min-width: 72px;
+        max-width: 72px;
+        height: 72px;
+        overflow: hidden;
+  
+        img {
+          width: 72px;
+          height: 72px;
+          object-fit: cover;
+        }
+      }
+  
+      &-title {
+        @include app-font(28px, 48px, 600);
+        color: $color-white !important;
+        margin: 24px 0 20px !important;
+        @media (max-width: 700px) {
+          width: 40% !important;
+          text-align: center;
+        }
+      }
+  
+      &-username {
+        @include app-font(40px, 48px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+      }
+  
+      &-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 0 14px;
+      }
+  
+      &-text1 {
+        @include app-font(22px, 19px);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+  
+        &.duration {
+          text-transform: capitalize;
+        }
+  
+        &.signature {
+          white-space: nowrap;
+        }
+  
+        &.organizer {
+          text-transform: capitalize;
+        }
+      }
+  
+      &-text2 {
+        @include app-font(24px, 24px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+      }
+  
+      &-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        &-sign {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+  
+          .certificate-text1.date {
+            height: 3rem;
+            margin-bottom: 8px !important;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+  
+        &-image {
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+          margin: 0 56px;
+  
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        @media (max-width: 700px) {
+          flex-direction: column;
+          gap: 40px;
+        }
+      }
+  
+      &-divider {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $color-disabled;
+        margin-bottom: 10px;
+      }
+  
+      &-signature {
+        width: 90px;
+        height: 3rem;
+        margin-bottom: 0.5rem;
+  
+        img {
+          width: 90px;
+          object-fit: cover;
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      min-height: auto;
+      padding: 30px 0px 30px 0px
+    }
+  }
+  
+  &-actions {
+    margin-top: 49px;
+    display: flex;
+    justify-content: center;
+  
+    .custom-button {
+      @include app-font(20px, 26px);
+      padding: 0 20px;
+    }
+  
+    @media (max-width: 575.98px) {
+      .custom-button {
+        width: 100%;
+        @include app-font(16px, 21px);
+      }
+    }
+  }
+  
+    @media (max-width: 575.98px) {
+      padding: 44px 0;
+    }
+  }  
+
+.certificate-participation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    margin-top: 25px;
+    margin-left: 180px;
+    @media (max-width: 700px) {
+      margin-left: 0px;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+}
+
+// .certificate-participation-logo {
+//     width: 126px;
+// }
+
+.certificate-participation-image {
+    width: 126px;
+}
+
+.custom-download-button {
+  background-color: #fe5621;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 31px;
+  border: none;
+  cursor: pointer;
+}
+
+.certificate-page-actions {
+  margin-top: 10px !important;
+  gap: 10px;
+}
+
+.share-certificate {
+  display: flex;
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 450px;
+  flex-direction: column;
+  align-items: flex-start;
+  @media (max-width: 700px) {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    
+  }
+}
+
+.certificate-page__list-wrap {
+  padding-top: 100px;
+  overflow: auto;
+  height: calc(100vh - 200px);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

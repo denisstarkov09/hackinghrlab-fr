@@ -1,0 +1,138 @@
+@import "styles/main.scss";
+
+.simulation-sprint-resource-card{
+    border-radius: 10px;
+    border: 1px solid $color-border;
+    box-shadow: 0px 2px 3px $color-disabled;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: 10px;
+
+    &-icon{
+        background: $color-accent;
+        color: $color-white;
+        border-radius: 10px 10px 0px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+        font-size: 2rem
+    }
+
+    &-container{
+        padding: .5rem;
+        width: 100%;
+    }
+
+    &-title{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid $color-border;
+        margin-bottom: .5rem;
+
+        & h1{
+            font-size: 1.5rem !important;
+            color: $color-text-primary !important;
+        }
+    }
+
+    &-type{
+        span{
+            font-weight: 500;
+        }
+    }
+
+    &-description{
+        margin-top: 1rem;
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    &-date{
+        display: flex;
+        align-items: center;
+
+        h1{
+            font-size: 1.5rem !important;
+        }
+
+        & span{
+            font-size: 1.2rem !important;
+            margin-left: 5px;
+            font-weight: 600;
+            text-decoration: dotted !important;
+        }
+    }
+
+    &-toggle {
+        display: flex;
+        align-items: center;
+        color: $color-accent;
+        @include app-font(16px, 21px, 600);
+        cursor: pointer;
+    
+        @media screen and (max-width: 900px) {
+         margin-top: 1rem;
+       }
+
+ 
+        &-icon {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: 5px;
+          min-width: 1, 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: $color-accent;
+          transition: 500ms all ease;
+    
+          &.show {
+            transform: rotate(180deg);
+            transition: 500ms all ease;
+          }
+    
+          svg {
+            width: 24px;
+            height: 24px;
+    
+            path {
+              stroke: $color-white;
+            }
+          }
+        }
+      }
+
+      &-resources{
+        border-top: none;
+        margin-top: 1rem;
+        overflow: hidden;
+        height: 0px;
+        transition: 500ms all ease;
+
+        &.show{
+            transition: 500ms all ease;
+            height: 200px;
+
+        }
+      }
+
+      &-button{
+        width: 100%;
+        padding: .5rem 0px;
+        display: flex;
+        button{
+            margin-left: auto;
+            margin-right: 10px;
+        }
+      }
+    
+}

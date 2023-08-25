@@ -1,0 +1,19 @@
+@import "styles/main.scss";
+
+.card-menu-dropdown {
+  &-content {
+    min-width: 80px;
+  }
+
+  &-menu {
+    color: $color-text-primary;
+    @include app-font(14px, 19px);
+    padding: 0.5rem 0;
+    cursor: pointer;
+    display: block;
+
+    &:hover {
+      color: $color-primary !important;
+    }
+  }
+}

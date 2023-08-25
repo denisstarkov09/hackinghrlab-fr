@@ -1,0 +1,46 @@
+@import "styles/main.scss";
+
+.podcast-filter-panel {
+  width: 266px;
+  height: calc(100vh - 72px);
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 44px 2rem 2rem;
+  z-index: 9;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > button {
+    margin-bottom: 1rem !important;
+  }
+
+  .search-input {
+    margin: 1.25rem 0 2.25rem;
+  }
+
+  &-share {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .custom-calendar {
+    margin-bottom: 52px;
+  }
+
+  .search-filter {
+    margin-top: 36px;
+
+    & > .ant-checkbox-group {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+
+      .ant-checkbox-wrapper {
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}

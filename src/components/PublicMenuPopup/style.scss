@@ -1,0 +1,22 @@
+@import "styles/main.scss";
+
+.public-menu-popover {
+  cursor: pointer;
+
+  &-content {
+    margin: 4px 0;
+
+    &-menu {
+      color: $color-text-primary;
+      @include app-font(18px, 19px);
+      margin: 2rem 0.5rem;
+      cursor: pointer;
+      display: block;
+
+      &:hover {
+        color: $color-primary !important;
+        font-weight: bold !important;
+      }
+    }
+  }
+}

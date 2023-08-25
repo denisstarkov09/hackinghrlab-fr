@@ -1,0 +1,70 @@
+@import "styles/main.scss";
+
+.profile-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 28px 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid $color-border;
+
+  @media (max-width: 575.98px) {
+    padding: 28px 20px;
+  }
+
+  .section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 355px;
+
+    @media (max-width: 767.98px) {
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    @media (max-width: 575.98px) {
+      .custom-button {
+        width: 100%;
+      }
+    }
+
+    & > span {
+      @include app-font(26px, 30px);
+      color: $color-text-primary;
+
+      @media (max-width: 575.98px) {
+        @include app-font(20px, 30px, 600);
+      }
+    }
+
+    .custom-button {
+      font-weight: 500 !important;
+      margin-top: 28px;
+    }
+  }
+
+  .section-right {
+    @media (max-width: 767.98px) {
+      .circular-progress-bar {
+        display: none;
+      }
+    }
+  }
+}
+
+.inline-comma {
+  padding: 0px;
+  display: inline;
+  margin-left: .5em;
+  li {
+    display: inline;
+  }
+  li::after {
+    content: "; ";
+  }
+  li:last-child::after {
+      content: "";
+  }
+}

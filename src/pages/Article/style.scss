@@ -1,0 +1,68 @@
+@import "styles/main.scss";
+
+.article-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+  overflow: auto;
+  padding: 60px 0;
+  background: $color-white;
+  overflow-x: hidden;
+
+  &-title {
+    line-height: 48px !important;
+    text-align: center;
+
+    @media (max-width: 575.98px) {
+      @include app-font(26px, 39px, 700);
+    }
+  }
+
+  &-desc {
+    color: $color-text-third !important;
+    margin-top: 26px !important;
+    text-align: center;
+    font-weight: 500 !important;
+  }
+
+  .view-original {
+    margin-top: 36px !important;
+    text-align: center;
+    color: $color-accent !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+
+    @media (max-width: 575.98px) {
+      margin-top: 28px !important;
+      @include app-font(20px, 26px);
+    }
+  }
+
+  &-text {
+    @include app-font(20px, 30px);
+    color: $color-text-primary;
+    text-align: justify;
+    margin-top: 60px !important;
+
+    &.original:not(:first-child) {
+      margin-top: 36px !important;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-top: 44px !important;
+    }
+  }
+
+  &-subtitle {
+    line-height: 48px !important;
+    margin-top: 60px !important;
+
+    @media (max-width: 575.98px) {
+      margin-top: 44px !important;
+      @include app-font(26px, 39px, 700);
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 44px 0;
+  }
+}

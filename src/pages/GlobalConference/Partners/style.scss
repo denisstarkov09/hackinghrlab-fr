@@ -1,0 +1,27 @@
+@import "../../../styles/main.scss";
+
+.partners-list {
+  margin-top: 13rem;
+  width: 1000px;
+
+  @media (max-width: 1100px) {
+    margin-top: 21rem;
+  }
+
+  &-container {
+    margin: 2rem 3rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    width: 100%;
+
+    @media (max-width: 500px) {
+      margin: 2rem 0rem;
+    }
+    .session-step,
+    .annual-conference-card {
+      margin-bottom: 2rem !important;
+    }
+  }
+}

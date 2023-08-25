@@ -1,0 +1,398 @@
+@import "../../styles/main.scss";
+
+.global-conference{
+  background: $color-background;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+  height: calc(100vh - 72px);
+    @media (max-width: 1024px) {
+    .global-conference-filter-panel {
+      display: none;
+    }
+
+    .ant-menu{
+      display: flex !important;
+      justify-content: center !important;
+    }
+  }
+
+  .attending-label {
+    margin-right: 37px;
+    color: $color-success;
+    @include app-font(16px, 21px, normal);
+    white-space: nowrap;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    &__filters--button {
+      display: none;
+      button {
+      width: 100%;
+      }
+    @media (max-width: 1024px) {
+        display: block;
+      }
+    }
+
+    &-container{
+      padding:0 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: auto;
+      width: 100%;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &__filters--button {
+        display: none;
+        button {
+          width: 100%;
+        }
+        @media (max-width: 1024px) {
+          display: block;
+        }
+      }
+
+      &-top-menu {
+        z-index: 20 !important;
+        background: $color-background;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem 10px;
+ 
+       .button-containers{
+         display: flex !important;
+         align-items: center;
+         margin-left: auto;
+         margin-right: auto;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         min-width: 300px;
+         max-width: 950px;
+         width: 100%;
+         text-align: center;
+         & .custom-button{
+           margin-top: .5rem;
+           max-width: 230px;
+         }
+
+         .button-participation-report {
+          margin-top: 12px;
+          padding: 0px 13px;
+          font-size: 10px !important;
+         }
+ 
+       @media (max-width: 500px) {
+         & .custom-button{
+          max-width: 170px !important;
+          font-size: 12px !important;
+          padding: 0px 5px !important;
+         }
+
+         .button-participation-report {
+          font-size: 11px !important;
+         }
+ 
+       }
+ 
+       @media (max-width: 400px) {
+         & .custom-button{
+           max-width: 155px !important;
+           font-size: 12px !important;
+           padding: 0px 0px !important;
+         }
+
+         .button-participation-report {
+          font-size: 11px !important;
+         }
+       }
+ 
+       }
+
+       .sub-menu{
+        background: none;
+        // max-width: 1500px;
+    
+        @media (max-width: 1024px) {
+          max-width: 98%;    
+          }
+
+          @media (max-width: 800px) {
+            max-width: 92%;
+              
+            }
+
+          @media (max-width: 500px) {
+            max-width: 90%;
+              
+            }
+
+          &-item-global-conference {
+            font-size: 16px;
+            padding: 0px 2rem !important;
+          
+            @media (max-width: 1024px) {
+            padding: 0px .9rem !important;
+              
+            }
+
+            @media (max-width: 400px) {
+              font-size: 12px;
+              padding: 0px .2rem !important;
+                
+              }
+
+            &-fake-tabs{
+              font-size: 20px;
+              padding: 0px 14px !important;
+
+            &.disabled{
+              color: $color-text-secondary !important;
+              &:hover{
+                border-bottom: none !important;
+              }
+            }
+          
+              @media (max-width: 400px) {
+                font-size: 18px;
+                padding: 0px .6rem !important;
+                  
+                }
+            }
+          
+          }
+      }
+    
+ 
+     }
+
+  
+
+a:hover,
+a:active,
+.ant-menu-item-selected a {
+  color: $color-primary !important;
+}
+
+
+.sub-menu-item-global-conference:hover,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.sub-menu-item-global-conference:active {
+  border-bottom: 2px solid $color-primary !important;
+  color: $color-primary !important;
+}
+
+        
+}
+
+.button-requirements{
+  background: $color-accent !important;
+  border: none !important;
+  align-self: center;
+  color: #fff;
+  padding: 0px 13px;
+
+  &:hover, &:active{
+    color: #fff !important;
+    background-color: $color-info !important;
+  }
+}
+ &-tabs{
+  width: 100%;
+  max-width: 1100px;
+  max-height: 100vh;
+  overflow: auto;
+
+
+&::-webkit-scrollbar {
+	width: 10px;
+}
+
+&::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+	background: $color-text-secondary;
+}
+  
+ .ant-tabs-nav{
+   display: none !important;
+ }
+
+ @media (max-width: 430px) {
+    margin-top: -9rem;
+  }
+
+  &-description {
+    margin-top: 1rem;
+    @include app-font(16px, 24px);
+    color: $color-text-secondary;
+
+    @media (max-width: 1300px){
+      padding: 0px 10px;
+    }
+
+    @media (max-width: 800px){
+      margin-top: 1rem;
+      padding: 0px 10px;
+      max-height: 100px;
+      overflow-y: scroll;
+    }
+  }
+
+  .button-requirements{
+    background: $color-accent !important;
+    border: none !important;
+    align-self: center;
+    color: #fff;
+
+    &:hover, &:active{
+      color: #fff !important;
+      background-color: $color-info !important;
+    }
+  }
+
+
+
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  
+    .custom-button {
+      margin-left: 0.5rem;
+      padding: 0 1rem;
+    }
+
+  }
+
+  .sub-menu{
+    background: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+
+    @media (max-width: 1500px){
+      position: relative;    
+      max-width: 1100px;
+      }
+
+    @media (max-width: 1025px){
+    position: relative;
+    width: 100%
+    }
+
+  }
+
+
+  &-tabs {
+    width: 100%;
+
+    .ant-tabs > .ant-tabs-nav,
+    .ant-tabs > div > .ant-tabs-nav{
+    position: fixed;
+    background: $color-background;
+    z-index: 32;
+    width: 52%;
+    top: 19rem;
+    left: 34%;
+
+    @media (max-width: 1500px){
+      top: 18rem;
+      left: 28%;
+      width: 70.5%;
+      }
+
+      @media (max-width: 1300px){
+        top: 21.5rem;
+        left: 30%;
+        width: 70.5%;
+        }
+
+    @media (max-width: 1100px){
+      top: 22rem;
+      left: 40%;
+      width: 55%;
+      }
+
+    @media (max-width: 800px){
+      top: 25rem;
+      left: 20%;
+      width: 75%;
+      }
+
+    @media (max-width: 500px){
+      top: 26.5rem;
+      width: 110%;
+    left: -10%;
+      }
+  
+    @media (max-width: 400px){
+      top: 26.5rem;
+      width: 107%;
+    left: -12%;
+      }
+ 
+    }
+
+
+    .ant-tabs-nav-wrap {
+      display: flex;
+      padding: 0px 15%;
+      @media(max-width) {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &-buttom-options{
+    @media (max-width: 500px){
+      padding: 5px 10px !important
+      }  
+  }
+  
+ }
+}
+
+.zoom-button{
+  width: 25px !important;
+  height: 25px !important;
+  padding: 0px 5px !important;
+  margin-bottom: 5px;
+}
+
+.button-invite-colleague{
+  background: $color-accent !important;
+  border: none !important;
+  color: #fff !important;
+  align-self: center;
+
+  &:hover, &:active{
+    color: #fff !important;
+    background-color: $color-info !important;
+  }
+}
+
+
+.ant-modal-footer .ant-btn-primary{
+  background: $color-primary;
+  border: none;
+}
+
+.ant-modal-footer .ant-btn-primary:hover, .ant-btn-primary:focus{
+  background: $color-primary;
+  border-color: $color-primary;
+}

@@ -1,0 +1,49 @@
+@import "../../../styles/main.scss";
+
+
+.sprints-prices-card{
+    min-width: 300px;
+    text-align: center;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 2px $color-disabled;
+    margin-top: 20px !important;
+
+    .ant-card-body{
+        padding: 0px !important;
+
+        h1{
+            margin-top: 15px !important;
+            margin-bottom: 10px !important;
+        }
+    }
+
+    p{
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    &-price-container{
+        background: $color-primary;
+        padding: 20px 0px;
+        width: 100%;
+        & h2{
+            color: $color-white !important;
+        }
+    }
+
+    .pay-button-container{
+        padding: 0px 15px;
+    }
+
+    .pay-buttton {
+
+        margin: 30px 5px 15px 0px;
+
+        width: 100%;
+        height: 36px;
+        background: #438cef;
+        @include app-font(16px, 16px, bold);
+        color: $color-white;
+        border-radius: 5px;
+      }
+}

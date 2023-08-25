@@ -1,0 +1,19 @@
+@import "../../../styles/main.scss";
+
+.advertiser-dashboard-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  height: 100%;
+
+  .advertiser-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .advertiser-content{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

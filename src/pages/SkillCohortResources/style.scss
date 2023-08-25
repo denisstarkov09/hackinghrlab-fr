@@ -1,0 +1,343 @@
+@import "styles/main.scss";
+
+.skill-cohort-resources-page {
+  width: 100%;
+  background: $color-background;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1350px;
+    margin-left: auto;
+    // margin-right: auto;
+    overflow: auto;
+  }
+
+	&-container {
+		height: calc(100vh - 72px);
+		overflow: auto;
+		position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    @media (max-width: 1024px) {
+			flex-direction: column;
+		}
+    
+		@media (max-width: 576px) {
+			padding: 1rem;
+		}
+
+    &-header {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: 500;
+    }
+	}
+
+	.todays-resource {
+		padding-bottom: 24px;
+    margin-top: 4rem;
+
+    &-text {
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 998px) {
+			flex-direction: column;
+      align-items: center;
+		}
+
+    @media (max-width: 1240px) {
+			.meeting-link {
+        margin-top: 1.5rem;
+      }
+		}
+	}
+
+	.skill-cohort-resources-list {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+    row-gap: 1rem;
+		margin-bottom: 36px;
+		margin-top: 24px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: flex-start;
+
+    @media (min-width: 640px) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+      
+		}
+
+    @media (min-width: 768px) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+      justify-items: center;
+		}
+
+    @media (min-width: 992px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-items: flex-start;
+		}
+
+    @media (min-width: 1280px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+		}
+
+    @media (min-width: 1536px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-items: flex-start;
+		}
+
+	}
+}
+
+.previous {
+  margin-top: 81px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-more-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+}
+
+.search-results-container-footer {
+  height: 64px;
+}
+
+.resources-page-loading-more {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-header-previous {
+
+  h3 {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    h3 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    h3 {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+}
+
+.participant-col {
+  margin-top: 20px;
+}
+
+.participant-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.display-participants {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.display-conversation-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display-conversation {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-container-1 {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.conversation-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  margin-right: 12px;
+}
+
+.form-container {
+  width: 100%;
+  .comment-input {
+    margin-bottom: 12px;
+  }
+}
+
+.replies-container {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 0;
+
+  .replies-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 70px;
+    margin-right: 12px;
+  }
+
+  .replies-user-info {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+    .name {
+      font-weight: 700;
+    }
+
+    .time {
+      font-size: 12px;
+    }
+  }
+
+  .replies-reply {
+    margin-top: 40px;
+  }
+
+  .reply-resource-form {
+    margin-bottom: 12px;
+  }
+}
+
+.skill-cohort-resource-panel {
+  width: 266px;
+  background: $color-white;
+  height: 100%;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 44px 0 2rem;
+  z-index: 9;
+  overflow: auto;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+    max-height: 300px;
+  }
+
+  @media (max-width: 500px) {
+    display: none ;
+  }
+
+  & > .font-regular {
+    padding-left: 2rem;
+  }
+
+  &-container {
+    margin-top: 2rem;
+  }
+
+  .skill-cohort-resource-item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-right: 3px solid $color-white !important;
+
+    &:hover,
+    &.active {
+      background-color: $color-background-dark !important;
+      border-right: 3px solid $color-primary !important;
+    }
+  }
+}
+
+.panel {
+  width: 100%;
+}
+
+.conversation-container {
+  width: 100%;
+}
+
+.wrapper-2 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 640px) {
+    width: 60%;
+  }
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 75%;
+  }
+
+  @media (min-width: 1536px) {
+    max-width: 1024px;
+  }
+}
+
+.spin-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #3c475252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}

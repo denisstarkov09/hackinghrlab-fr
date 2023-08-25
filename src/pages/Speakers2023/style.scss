@@ -1,0 +1,36 @@
+@import "../../styles/main.scss";
+
+.speaker2023-page {
+  width: 100%;
+  padding: 10px;
+
+  .custom-tabs > .ant-tabs-nav {
+    margin-top: 10px;
+    box-shadow: 0px 9px 8px -4px #37215714;
+  }
+
+  &-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    margin-top:20px;
+    margin-left:20px;
+
+    &-back {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & > h4 {
+      font-weight: normal !important;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import "styles/main.scss";
+
+.custom-modal {
+  position: relative;
+
+  .ant-modal-content {
+    border-radius: 5px;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    background: $color-background-dark;
+    margin: -1rem -1.5rem;
+    padding: 48px 0 16px;
+
+    h3 {
+      font-weight: bold !important;
+      padding: 0 32px;
+    }
+
+    h5 {
+      color: $color-text-secondary !important;
+      font-weight: 500 !important;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1px solid $color-border;
+    overflow: hidden;
+    top: -36px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: $color-white;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-close {
+    transform: translate(8px, -8px);
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  .ant-modal-body {
+    background: $color-background !important;
+  }
+}
+
+.custom-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-background;
+  z-index: 1000;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+
+  &.visible {
+    display: flex;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $color-border;
+    background: $color-background-dark;
+    padding: 35px 0 28px;
+
+    &-logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 1px solid $color-border;
+      overflow: hidden;
+      background: $color-white;
+      margin-bottom: 24px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      @include app-font(23px, 30px, bold);
+      color: $color-text-primary !important;
+      margin-bottom: 4px !important;
+    }
+
+    h5 {
+      @include app-font(16px, 21px);
+      color: $color-text-secondary !important;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: $color-text-third;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-background;
+    font-size: 20px;
+  }
+
+  &-content {
+    flex: 1;
+    overflow: auto;
+  }
+}

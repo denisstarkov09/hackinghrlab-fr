@@ -1,0 +1,151 @@
+@import "styles/main.scss";
+
+.notification-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+  background: $color-background;
+  overflow: auto;
+  padding: 3rem;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-loading-more {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-showmore {
+    margin-top: 3rem;
+  }
+
+  .notification-table {
+    tr {
+      cursor: pointer;
+    }
+
+    .ant-table-row-selected > td {
+      background-color: #fe562111;
+
+      &:hover {
+        background-color: #fe562111;
+      }
+    }
+
+    .ant-table-cell {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .ant-checkbox {
+      .ant-checkbox-inner {
+        border: 2px solid $color-border !important;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:not(.ant-checkbox-indeterminate) {
+        .ant-checkbox-inner::after {
+          width: 8px;
+          height: 16px;
+          margin-left: -2px;
+        }
+      }
+
+      &.ant-checkbox-indeterminate {
+        .ant-checkbox-inner::after {
+          width: 12px;
+          height: 12px;
+          background: $color-primary !important;
+        }
+      }
+
+      &.ant-checkbox-checked {
+        .ant-checkbox-inner {
+          background: $color-primary !important;
+          border: 2px solid $color-primary !important;
+        }
+      }
+    }
+    
+    &-header {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+
+      &-cell {
+        width: 32px;
+        height: 32px;
+        margin-right: 1rem;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        i {
+          font-size: 20px;
+          color: #fe5621;
+        }
+
+        &:hover {
+          border-radius: 16px;
+          background-color: #fe5621;
+
+          i {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .notification-list-item {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-border;
+    position: relative;
+
+    &-link {
+      @include app-font(16px, 18px);
+      color: $color-primary !important;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-message {
+      margin-bottom: 1rem !important;
+      position: relative;
+    }
+
+    &-date {
+      font-weight: 400 !important;
+      color: $color-text-secondary !important;
+    }
+
+    &-circle {
+      display: block;
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      min-height: 8px;
+      background: $color-primary;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -16px;
+      transform: translate(0, -50%);
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "styles/main.scss";
+
+.post-form-container {
+  padding: 1rem;
+  form {
+    .labelFroala {
+      font-size: 32px;
+    }
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      color: $color-text-primary;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "styles/_colors.scss";
+@import "styles/_mixins.scss";
+
+.micro-conference__page {
+  padding: 2rem 0;
+  height: calc(100vh - 72px);
+  overflow: auto;
+
+  @media (max-width: 575.98px) {
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 1023.98px) {
+    > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .ant-tabs-tabpane-active {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.micro-conference__container {
+  padding: 0 1rem;
+  width: 100%;
+  // max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.micro-conference__row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1023.98px) {
+    > * + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.micro-conference__row-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0.5rem;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 1023.98px) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &--video-player {
+    width: 70%;
+
+    @media (max-width: 1023.98px) {
+      width: 100%;
+    }
+  }
+
+  &--video-list {
+    width: 29%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+
+    &--title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px !important;
+      svg {
+        width: 30px !important;
+        margin-right: 15px;
+        color: $color-text-primary;
+        cursor: pointer;
+      }
+
+      
+    }
+
+    @media (max-width: 1023.98px) {
+      width: 100%;
+    }
+
+    &--back-link{
+      display: flex;
+      margin-top: 20px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.micro-conference__description-card {
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid #e1e2ee;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  padding: 1rem;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.micro-conference__description-speakers-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .ant-card{
+    max-width: 200px !important;
+  }
+
+}
+
+.micro-conference__description-p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+

@@ -1,0 +1,26 @@
+@import "../../../styles/main.scss";
+
+.message-wrapper{
+    max-height: 595px;
+    overflow-y: auto;
+    text-align: justify;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 8px;  
+        
+        &:hover{
+            display: block;
+        }
+      }
+
+    &::-webkit-scrollbar-thumb{
+        background: $color-text-secondary;
+        width: 3px;
+        border-radius: 4px;
+    }
+    p{
+        white-space: pre-line;
+    }
+}

@@ -1,0 +1,59 @@
+@import "styles/main.scss";
+
+.learning-journey-card {
+  width: 100%;
+  min-height: 238px;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  opacity: 1;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+
+  &__info {
+    width: 100%;    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-weight: normal !important;
+    }
+    .started {
+      margin-top: 1rem;
+      color: $color-text-secondary;
+    }
+  }
+
+  &__info--topics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    .specialty-item {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+  }
+
+  &__actions--progress {
+    width: 100%;
+    margin-top: 3.5rem;
+    text-align: center;
+    color: $color-accent;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,432 @@
+@import "styles/main.scss";
+
+.lading-header,.lading-header-conference {
+  height: 120px;
+  position: fixed;
+  box-shadow: 0px 1px 3px #37215729;
+  background: $color-white;
+  padding: 0 134px 0 158px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  .public-header-right-channel2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    transition: all 0.5s ease-in-out;
+    background: white;
+    justify-content: flex-end;
+
+    .container-you-are-now-register{
+
+      .div-you-are-now-register{
+        background: #00b574;
+        width: 300px;
+        height: auto;
+        margin: 0px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: normal;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+        margin-left: 20px;
+
+        p {
+          display: inline-block;
+          margin: 0px;
+          padding: 0px;
+        }
+
+      }
+      
+    }
+
+    .button-speaker{
+      width: auto;
+      margin-left: 20px;
+    }
+
+    .public-conference-links{
+      text-align: center;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all ease 300ms;
+      cursor: pointer;
+    
+      & p{
+        margin: 0px;
+        padding: 0px;
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      & p{
+        transition: all 0.2s ease-in-out;
+      }
+
+      & p:hover{
+        text-decoration: none;
+        color: $color-primary;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+  }
+
+  @media (max-width: 977.98px) {
+    .public-header-right-channel2{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+
+      .button-speaker{
+        margin-left: 0px;
+        margin-top: 5px;
+        width: 220px;
+      }
+    }
+  }
+
+  .conteiner-icon-menu{
+    width: 70px;
+    height: 70px;
+    margin-right: 0.5rem;
+    transform: translateY(10px);
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    display: none;
+    cursor: pointer;
+  }
+
+  .header-center{
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    align-items: center;
+
+    .description-header{
+      margin: 0px;
+      width: auto;
+      white-space: nowrap;
+      font-family: 'Suisse', sans-serif !important;
+      color: #000000;
+      font-size: 18px;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .modal-container-login, .modal-container-complete-profile {
+    width: 50% !important;
+    height: calc(100vh) !important;
+    top: 0px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .ant-modal-content {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+  
+      .ant-modal-close {
+        display: none;
+      }
+  
+      .login-page {
+        background: transparent;
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      width: 100% !important;
+      padding: 0 !important;
+  
+      .ant-modal-body {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .hr-logo {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .back-boton{
+    width: 190px;
+    height: 40px;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 0px;
+
+    p {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    
+  }
+
+  .checkboxHiden {
+    display: none;
+  }
+
+  .checkboxHiden:checked ~ .public-header-right {
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .public-header-menu {
+    @include app-font(20px, 26px, 600);
+    color: $color-text-primary;
+    padding: 0 23px;
+    display: inline-block;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .public-header-bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    color: $color-text-primary;
+    margin-right: 0.75rem;
+    font-size: 24px;
+  }
+
+  .public-header-right {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    transition: all 0.5s ease-in-out;
+    background: white;
+    justify-content: flex-start;
+    padding-left: 15px;
+
+    .container-you-are-now-register{
+
+      .div-you-are-now-register{
+        background: #00b574;
+        width: 300px;
+        height: auto;
+        margin: 0px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: normal;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+        margin-left: 20px;
+
+        p {
+          display: inline-block;
+          margin: 0px;
+          padding: 0px;
+        }
+
+      }
+      
+    }
+
+    .button-speaker{
+      width: auto;
+      margin-left: 20px;
+    }
+
+    .hidden-button-situation{
+      display: none;
+    }
+
+    .public-conference-links{
+      text-align: center;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all ease 300ms;
+      cursor: pointer;
+    
+      & a{
+        margin: 0px;
+        padding: 0px;
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      & a{
+        transition: all 0.2s ease-in-out;
+      }
+
+      & a:hover{
+        text-decoration: none;
+        color: $color-primary;
+        transition: all 0.2s ease-in-out;
+      }
+
+    }
+  }
+
+  @media (max-width: 1299.98px) {
+    padding: 0 44px 0 60px;
+
+    .public-header-menu {
+      @include app-font(16px, 26px, 600);
+      padding: 0 16px;
+    }
+  }
+
+  @media (max-width: 1095px) {
+
+    .public-header-conference{
+      flex-direction: column;
+      height: 500px;
+      box-shadow: none;
+    }
+
+    .back-boton{
+      top:80px;
+    }
+
+    .conteiner-icon-menu{ 
+      display: block;
+    }
+
+    .complete-profile {
+      width: 100% ;
+      height: 100vh ;
+      top: 0px ;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.45);
+      position: fixed;
+      z-index: 800;
+      transition: 0.2s all ease-in-out ;
+    }
+
+    .public-header-right{
+      top: 120px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      left: 0%;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      margin-top: -10px;
+      
+      .container-you-are-now-register{
+        .div-you-are-now-register{
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+      }
+
+      .button-speaker{
+        width: auto;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .public-conference-links{
+        padding:5px 20px;
+      }
+
+      .hidden-button-situation{
+        display: none;
+      }
+
+    }
+
+    .public-header-left-conference{
+      width: 95%;
+      left: 0%;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      
+    }
+    
+  }
+
+  @media (min-width: 1300px) {
+
+    .back-boton{
+      top:80px;
+      width: 390px;
+      height: 30px;
+      align-items: flex-start;
+    }
+
+  }
+
+  @media (max-width: 977.98px) {
+    padding: 0 16px 0 32px;
+
+    .public-header-menu {
+      @include app-font(16px, 26px, 600);
+      padding: 0 16px;
+    }
+
+    .public-header-right{
+      .hidden-button-situation{
+        display: flex;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+
+    .public-header-bar {
+      display: flex;
+    }
+  }
+}
+
+.space-channel{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background: #fafafc;
+}

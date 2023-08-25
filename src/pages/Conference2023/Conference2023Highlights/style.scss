@@ -1,0 +1,607 @@
+.container-conference{
+  overflow: hidden scroll;
+  height: calc(100vh - 10px);
+
+  .imagen-conference{
+    position: relative;
+    width: 108%;
+    height: 50vh;
+    background-image: url("https://upload-files-lab.s3.amazonaws.com/Home.jpg");
+    background-size: 100% 100%;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.19);
+    transform: translateX(-7%);
+    background-position: center 0%;
+    background-repeat: no-repeat;
+    background-attachment: unset;
+
+    .container-content-picture{
+      position: absolute;
+      top: 0px;
+      width: 93.5%;
+      right: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+  
+      .parrafo-hachinglab-picture{
+        width: 100%;
+        text-align: center;
+        height: 35px;
+        font-style: normal;
+        font-family: 'Segoe UI';
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .title-hachinglab-picture1, .title-hachinglab-picture2{
+        width: 100%;
+        height: 80px;
+        margin: 0px;
+        font-style: normal;
+        font-family: 'Segoe UI';
+        text-align: center;
+        font-weight: bold;
+        font-size: 90px;
+        line-height: 80px;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+        margin-top: 5px;
+  
+        .span-color{
+          color: #FE5621;
+        }
+      }
+  
+      .title-hachinglab-picture1{
+        font-size: 65px;
+        font-family: 'Segoe UI';
+      }
+  
+      .date-picture{
+        width: 100%;
+        text-align: center;
+        height: 35px;
+        margin-top: 30px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: -0.01em;
+        font-family: 'Segoe UI';
+        color: #FFFFFF;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      @media (max-width: 750px) {
+        .title-hachinglab-picture2{
+          margin-top: 75px;
+          font-size: 70px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .title-hachinglab-picture2, .title-hachinglab-picture1{
+          font-size: 48px;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container-content-picture{
+        height: 60vh;
+      }
+    }
+  } 
+
+  @media (max-width: 950px) {
+    .imagen-conference{
+      height: 60vh;
+    }
+  }
+
+  .container-speaker-home{
+    width: 100%;
+    background: #10253F;
+    height: auto;
+    padding-bottom: 100px;
+    margin-top: -100px;
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .p-speakers{
+      position: absolute;
+      top: 30px;
+      width: 100%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 80px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .button-speakers-home{
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.28);
+      font-style: normal;
+      font-weight: 450;
+      width: 180px;
+      font-size: 16px;
+      padding: 10px 5px;
+      line-height: 21px;
+      color: #FFFFFF;
+      order: 0;
+      flex-grow: 0;
+      transition: all ease-in-out 0.25s;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    .button-speakers-home:hover {
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      padding: 9px 14px;
+      background: none;
+      color: white;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container-speaker-home{
+      padding-top: 100px;
+    }
+  }
+
+  .container-agenda-home{
+    width: 100%;
+    padding: 0px 80px;
+    background: white;
+    height: auto;
+    padding-bottom: 100px;
+    position: relative;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .p-agenda{
+      position: absolute;
+      top: 30px;
+      width: 100%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 80px;
+      color: black;
+      text-align: start;
+      left: 60px;
+    }
+
+    .button-agenda-home{
+      border: none;
+      border-radius: 5px;
+      background: #FE5621;
+      font-style: normal;
+      font-weight: 450;
+      width: 250px;
+      font-size: 16px;
+      padding: 10px 5px;
+      line-height: 21px;
+      overflow: hidden;
+      color: #FFFFFF;
+      order: 0;
+      flex-grow: 0;
+      transition: all ease-in-out 0.25s;
+      margin-bottom: 25px;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+
+    .button-agenda-home:hover {
+      border: 2px solid #FE5621;
+      padding: 9px 14px;
+      background: none;
+      color: #FE5621;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .container-agenda-home{
+      padding-left: 40px;
+      padding-right: 0px;
+
+      .button-agenda-home{
+        margin-left: -40px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .container-agenda-home{
+      padding-left: 0px;
+      padding-right: 20px;
+
+      .button-agenda-home{
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .container-why-to-attend{
+    width: 100%;
+    height: auto;
+    background: #fe5621;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0% 12.5%;
+    padding-top: 30px;
+    padding-bottom: 90px;
+
+    .title-why-to-attend{
+      font-family: 'Segoe UI';
+      font-style: normal;
+      font-weight: bold;
+      color: white;
+      font-size: 60px;
+    }
+
+    .container-cards{
+      margin-top: 15px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+
+      .cards-attend{
+        width: 22.5%;
+        height: auto;
+
+        .img-attend1,.img-attend2,.img-attend3,.img-attend4{
+          background-image: url(../../../images/algorithm.png);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          width: 80px;
+          height: 80px;
+        }
+
+        .img-attend2{
+          background-image: url(../../../images/knowledge.png);
+        }
+
+        .img-attend3{
+          background-image: url(../../../images/idea.png);
+        }
+
+        .img-attend4{
+          background-image: url(../../../images/collaboration.png);
+        }
+
+        .title-attend{
+          color: white;
+          text-transform: uppercase;
+          font-family: 'Segoe UI';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 26px;
+          margin: 0px;
+          margin-top: 20px;
+        }
+
+        .p-attend{
+          color: white;
+          font-weight: bold;
+          text-align: left;
+          font-family: 'Segoe UI';
+          font-weight: 100;
+          font-size: 16px;
+          margin: 0px;
+        }
+      }
+
+      .top-attend{
+        margin-top: 0px;   
+      }
+
+      @media (max-width: 1100px) {
+        .cards-attend{
+          width: 45%;
+          margin-top: 65px;
+        }
+      }
+      @media (max-width: 1100px) {
+        .cards-attend{
+          width: 100%;
+          margin-top: 0px;
+        }
+
+        .top-attend{
+          margin-top: 65px;
+        }
+      }
+    }
+
+  }
+
+  .container-publicity{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #10253F;
+    padding-top: 50px;
+    padding-bottom: 110px;
+
+    .p-publicity{
+      position: absolute;
+      top: 20px;
+      width: 95%;
+      left: 2.5%;
+      font-style: normal;
+      font-size: 60px;
+      line-height: 80px;
+      color: #FFFFFF;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      .p-publicity{
+        font-size: 40px;
+      }
+    }
+    
+    .container-data{
+      width: 90%;
+      margin-left: 5%;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 80px;
+
+      .picture-video{
+        width: 100%;
+        height: 500px;
+        background-image: url("https://upload-files-lab.s3.amazonaws.com/Rectangle36.jpg");
+        background-repeat: no-repeat;
+        background-size:100% 100% ;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        .gradient-picture{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, #10253F 0%, rgba(16, 37, 63, 0) 123.61%);
+          z-index: 50;
+        }
+
+        .play-picture{
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          background-image: url(../../../images/Subtract.svg);
+          background-repeat: no-repeat;
+          background-size:100% 100% ;
+          z-index: 49;
+        }
+
+        .p-picture-publicity{
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 46px;
+          line-height: 63px;
+          color: #FFFFFF;
+          z-index: 51;
+          
+        }
+      }
+
+      @media (max-width: 1050px) {
+        .picture-video{
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .container-information{
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .picture-video{
+          width: 100%;
+          height: 400px;
+          margin-bottom: 30px;
+
+          .p-picture-publicity{
+            font-size: 40px;
+          }
+        }
+        .container-information{
+          width: 50%;
+        }
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .container-data{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+    }
+  }
+
+  .container-parraf{
+    width: 100%;
+    left:0px;
+    top: 0px;
+    background: white;
+    height: auto;
+    padding-bottom: 150px;
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    em{
+      color:  black;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .container-publicity{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .container-publicity{
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container-publicity{
+      padding-top: 100px;
+    }
+  }
+
+  .container-sponsors{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .p-sponsors{
+      width: 100%;
+      text-align: center;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 80px;
+      color: #FE5621;
+
+      span {
+        color: black;
+      }
+    }
+
+    .button-sponsor-home{
+      border: none;
+      border-radius: 5px;
+      background: #FE5621;
+      font-style: normal;
+      font-weight: 450;
+      width: 250px;
+      font-size: 16px;
+      padding: 10px 5px;
+      line-height: 21px;
+      color: #FFFFFF;
+      order: 0;
+      flex-grow: 0;
+      transition: all ease-in-out 0.25s;
+      margin-bottom: 25px;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+
+    .button-sponsor-home:hover {
+      border: 2px solid #FE5621;
+      padding: 9px 14px;
+      background: none;
+      color: #FE5621;
+    }
+  }
+
+  .footer-home{
+    width: 100%;
+    height: auto;
+    background: #10253F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:40px ;
+    padding-bottom: 100px;
+
+    .logo-footer{
+      width: 60px;
+      height: 60px;
+      background-image: url("../../../images/img-hhr-logo.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      margin-bottom: 50px;
+    }
+
+    .container-link-footer{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+      .p-link-footer{
+        margin: 0px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        text-decoration-line: none;
+      }
+
+      .p-link-footer:hover {
+        text-decoration: none;
+        text-decoration-line: none;
+      }
+    }
+
+    .reserved{
+      margin: 0px;
+      width: 100%;
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: 300;
+      text-align: center;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+

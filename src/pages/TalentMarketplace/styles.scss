@@ -1,0 +1,53 @@
+.talent-marketplace-page {
+  height: 100vh;
+  display: flex;
+
+  .talent-marketplace-tabs-wrapper {
+    padding-left: 1rem;
+    width: 100%;
+    height: 100%; 
+
+    .job-board-wrapper {
+      max-height: calc(100vh - 4.5rem - 66px);
+      overflow-y: auto;
+      
+      .job-posts-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+        width: 100%;
+  
+        @media (min-width: 640px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+  
+        @media (min-width: 1280px) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+  
+        @media (min-width: 1536px) {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+}
+
+.search-results-container-footer {
+  height: 64px;
+}
+
+.job-board-page-loading-more {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1023.98px) {
+  .job-board-filter-panel {
+    display: none;
+  }
+
+}

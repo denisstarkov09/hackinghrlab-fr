@@ -1,0 +1,80 @@
+@import "styles/main.scss";
+
+.custom-checkbox {
+  display: flex !important;
+  align-items: center;
+  width: fit-content;
+
+  .ant-checkbox-inner {
+    border: 2px solid $color-border !important;
+  }
+
+  &:hover .ant-checkbox-checked::after {
+    border: none !important;
+  }
+
+  &.primary {
+    .ant-checkbox.ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background: $color-primary !important;
+        border: 2px solid $color-primary !important;
+      }
+    }
+  }
+
+  &.md .ant-checkbox-inner {
+    width: 28px;
+    height: 28px;
+
+    &::after {
+      width: 10px;
+      height: 1rem;
+      margin-top: -2px;
+    }
+  }
+
+  &.sm .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+
+    &::after {
+      width: 9px;
+      height: 13px;
+      margin-left: -2px;
+      margin-top: -1px;
+    }
+  }
+
+  &.md > span:last-child {
+    padding-left: 1rem !important;
+    @include app-font(20px, 30px);
+    color: $color-text-secondary;
+
+    @media (max-width: 575.98px) {
+      @include app-font(16px, 30px);
+    }
+  }
+
+  &.sm > span:last-child {
+    padding-left: 1rem !important;
+    @include app-font(14px, 30px);
+    color: $color-text-secondary;
+  }
+
+  &.xs {
+    width: 100%;
+    height: 14px;
+    color: $color-text-secondary;
+
+    &::after {
+      width: 9px;
+      height: 13px;
+      margin-left: -2px;
+      margin-top: -1px;
+    }
+
+    .ant-checkbox {
+      top: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "styles/main.scss";
+
+.profile-view-panel {
+
+  &-header {
+    background: $color-background-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .user-info {
+      &-avatar {
+        margin-top: 26px;
+      }
+
+      &-name {
+        margin-top: 0.5rem !important;
+        margin-bottom: 37px !important;
+
+        @media (max-width: 575.98px) {
+          @include app-font(26px, 34px, bold);
+        }
+      }
+    }
+
+    .profile-complete-btn {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @media (max-width: 575.98px) {
+        width: calc(100% - 40px);
+      }
+    }
+  }
+
+  &-content {
+    padding: 20px 2rem 40px;
+
+    .textfield-label {
+      font-weight: bold !important;
+      margin-top: 52px !important;
+    }
+
+    .textfield-value {
+      font-weight: 500 !important;
+      margin-top: 0.75rem !important;
+      color: $color-primary !important;
+
+      &.completed {
+        color: $color-text-secondary !important;
+      }
+    }
+
+    .personal-link {
+      display: flex;
+      align-items: center;
+      margin-top: 0.75rem;
+
+      &-icon {
+        font-size: 32px;
+        color: $color-text-secondary;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+      }
+
+      .textfield-value {
+        margin-top: 0 !important;
+        margin-left: 1rem !important;
+        padding: 0.75rem 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 34px 20px 40px;
+
+      .textfield-label {
+        margin-top: 28px !important;
+        @include app-font(16px, 21px, 600);
+      }
+
+      .textfield-value {
+        @include app-font(16px, 24px);
+
+        &.completed {
+          color: $color-text-primary !important;
+        }
+      }
+
+      .personal-link {
+        &-icon {
+          margin-right: 0.5rem;
+        }
+
+        .textfield-value {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "styles/main.scss";
+
+.affix{
+    position: absolute;
+    right: 400px;
+    bottom: 0;
+    z-index: 500;
+
+}
+
+
+.chat-mobile{
+    display: flex;
+    height: calc(100vh - 78px);
+
+    &-user-info{
+        width: 100%;
+        padding: 0px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid  $color-border
+    }
+
+    &-user-names{
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20px;
+    }
+
+    .avatar-container{
+        position: relative;
+        &::after{
+            content: "";
+            width: 12px;
+            height: 12px;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            position: absolute;
+            background: $color-success;
+            border: 1px solid $color-border;
+        }
+    }
+
+    &-messages-container{
+        width: 75%;
+        max-height:  calc(100vh - 300px);
+
+        @media (max-width: 600px){
+            width: 70%;    
+        }
+        
+    }
+
+    &-messages{
+        height:  calc(100vh - 185px);
+        padding-top: 15px;
+        overflow-y: auto;
+    }
+
+    .conversations-mobile{
+        height:  calc(100vh - 78px);
+        border-left: 1px solid $color-border;
+        background: $color-white;
+        box-shadow: 4px 0px 14px #37215714;
+        overflow-y: auto;
+        position: relative;
+        width: 25%;
+        @media (max-width: 600px){
+            width: 30%;    
+        }
+        &::-webkit-scrollbar {
+            width: 5px;
+            display: none
+          }
+          
+   
+    }
+}
+
+.ant-drawer-body{
+    padding: 0px 1rem !important;
+}

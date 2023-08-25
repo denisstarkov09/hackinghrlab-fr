@@ -1,0 +1,89 @@
+@import "styles/main.scss";
+
+.article-header {
+  width: 100%;
+  height: 4.5rem;
+  background: $color-white;
+  border: 1px solid $color-border;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & > .ant-row {
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  &-content {
+    .icon-wrapper {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .article-title {
+      @include app-font(20px, 21px);
+      color: $color-text-third !important;
+    }
+
+    .star-icon {
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 991.98px) {
+      padding: 0 8px;
+
+      .article-title {
+        @include app-font(16px, 21px);
+      }
+
+      .star-icon {
+        margin-right: 0.75rem;
+      }
+
+      .bookmark-icon, .star-icon {
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 24px;
+    cursor: pointer;
+
+    @media (max-width: 991.98px) {
+      display: none !important;
+    }
+  }
+
+  &-mobile-close {
+    text-align: right;
+    padding: 8px;
+    display: none;
+
+    &-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: $color-text-third !important;
+    }
+
+    @media (max-width: 991.98px) {
+      display: block !important;
+    }
+  }
+}

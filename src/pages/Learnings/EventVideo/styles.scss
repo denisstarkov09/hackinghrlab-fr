@@ -1,0 +1,24 @@
+.event-video {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+
+  &-btns {
+    display: flex;
+    align-items: baseline;
+    width: 100px;
+
+    .icon-btn {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    font-size: 1rem;
+    margin-right: 1rem;
+    width: calc(100% - 100px);
+  }
+}

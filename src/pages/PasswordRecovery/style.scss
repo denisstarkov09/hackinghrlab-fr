@@ -1,0 +1,111 @@
+@import "styles/main.scss";
+
+.password-recovery-layout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  opacity: 1;
+  width: 100vw;
+
+  &__logo {
+    margin: -80px auto;
+    margin-bottom: 2em;
+    width: 92px;
+    height: 92px;
+    border-radius: 92px;
+    background: $color-white 0% 0% no-repeat padding-box;
+    border: 1px solid $color-border;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e1e2ee;
+    opacity: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__form-container {
+    padding: 2em;
+    width: 472px;
+    min-height: 460px;
+    background: $color-white 0% 0% no-repeat padding-box;
+    border: 1px solid $color-border;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 4px 0px 14px #37215714;
+    border: 1px solid #e1e2ee;
+    border-radius: 8px;
+    opacity: 1;
+
+    h3 {
+      height: 34px;
+      letter-spacing: 0px;
+      color: $color-text-secondary;
+      text-align: center;
+      letter-spacing: 0px;
+      opacity: 1;
+    }
+
+    &--p {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 408px;
+      height: 40px;
+      letter-spacing: 0px;
+      color: $color-text-secondary;
+      text-align: left;
+      opacity: 1;
+    }
+
+    button {
+      margin-top: 0.5em;
+      width: 100%;
+      height: 42px !important;
+      border-radius: 8px !important;
+    }
+
+    .spinner-container {
+      margin-top: 2em;
+      text-align: center;
+      width: 100%;
+
+      .ant-spin {
+        color: $color-primary;
+        font-size: 40px;
+      }
+    }
+
+    .form-container__footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+
+      a {
+        letter-spacing: 0px;
+        color: $color-accent;
+        text-align: center;
+        opacity: 1;
+        margin-top: 1em;
+        font-weight: 700;
+      }
+
+      a:first-child {
+        margin-right: 2em;
+      }
+    }
+
+    .ant-form-item-required {
+      @include app-font(14px, 19px, 600);
+      color: $color-text-secondary !important;
+
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+}

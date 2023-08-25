@@ -1,0 +1,126 @@
+@import "../../styles/main.scss";
+
+.public-marketplace-page {
+  margin-top: 92px;
+  height: calc(100vh - 92px);
+  
+  .marketplace-filter-panel {
+    height: calc(100vh - 92px);
+  }
+
+  .public-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.marketplace-page {
+  height: calc(100vh - 72px);
+  .marketplace-filter-panel {
+    height: calc(100vh - 72px);
+  }
+  .public-title{
+    display: none;
+  }
+}
+
+.public-marketplace-page,
+.marketplace-page {
+  grid-template-columns: auto 1fr;
+  display: grid;
+  width: 100%;
+  overflow: auto;
+
+  .search-results-container {
+    background: $color-background;
+    overflow: auto;
+    padding-top: 4rem;
+    position: relative;
+
+    &-mobile-header {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      height: 82px;
+      padding: 0 1rem;
+      background: $color-white;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e1e2ee;
+
+      .filters-btn {
+        color: $color-primary !important;
+
+        &.disabled {
+          color: $color-disabled !important;
+          cursor: not-allowed;
+        }
+      }
+      h3 {
+        cursor: pointer;
+      }
+    }
+
+    &-header {
+      margin: 0px auto 36px auto;
+      width: 904px;
+    }
+
+    &-sort {
+      width: max-content;
+      height: 24px !important;
+
+      .ant-select-selector {
+        height: 24px !important;
+        padding-right: 24px !important;
+      }
+    }
+  }
+
+  @media (max-width: 1023.98px) {
+    display: block;
+
+    .marketplace-filter-panel {
+      display: none;
+    }
+
+    .search-results-container {
+      padding: 0 0 54px;
+
+      &-header {
+        flex-direction: column;
+        justify-content: center !important;
+        width: 100%;
+        margin-bottom: 50px;
+
+        h3 {
+          display: none;
+        }
+      }
+
+      &-mobile-header {
+        display: flex;
+      }
+
+      &-sort {
+        .ant-select-selection-item {
+          @include app-font(20px, 30px);
+        }
+      }
+    }
+
+    .search-results-list {
+      margin: 0 4rem 44px;
+      justify-items: center;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+@import "styles/main.scss";
+
+
+
+.conversations{
+    height: calc(100vh - 50px);
+    border-left: 1px solid $color-border;
+    background: $color-white;
+    box-shadow: 4px 0px 14px #37215714;
+    overflow-y: auto;
+    position: relative;
+    min-width: 200px;
+    max-width: 200px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        display: none
+      }
+
+    &-not-available{
+     background: $color-disabled;
+     display: flex;
+    padding: 15% 0;
+    }
+}
+
+.chat{  
+    border-radius: 10px 10px 0px 0px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    box-shadow: 0px 0px 3px $color-background-dark;
+    width: 330px;
+    height: 400px;
+    position: fixed;
+    bottom: 28px;
+    z-index: 300;
+
+    &-user-info{
+        width: 100%;
+        padding: 0px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid  $color-border
+    }
+
+    &-user-names{
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20px;
+
+        p{
+            margin-top: 0px !important;
+        }
+    }
+
+    .avatar-container{
+        position: relative;
+        &::after{
+            content: "";
+            width: 12px;
+            height: 12px;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            position: absolute;
+            background: $color-success;
+            border: 1px solid $color-border;
+        }
+    }
+    
+
+    &-messages{
+        text-align: center;
+        padding: 20px 10px 10px 10px;
+        max-height: 290px;
+        height: auto;
+        overflow-y: auto;   
+
+        &::-webkit-scrollbar {
+            width: 5px;
+          }
+          
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            display: none
+          }
+           
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #888; 
+            display: none;
+            border-radius: 5px;
+            position: absolute;
+
+          }
+
+        &:hover{
+            &::-webkit-scrollbar-thumb{
+                display: block;
+                transition: all ease 500ms;
+            }
+        }
+    }
+
+    p{
+        font-size: .8rem;
+        letter-spacing: 0;
+    }
+
+    &-message{
+        background: $color-background-dark;
+        color: $color-text-secondary;
+        padding: 5px;
+        max-width: 250px;
+        border-radius: 5px 5px 0px 0px;
+        position: relative;
+    }
+
+    &-message-contact{
+        background: $color-background-dark;
+        color: $color-text-secondary;
+        margin-left: 5px;
+
+        &-image{
+            background: none;
+            margin-left: 5px;
+        }
+
+      
+        .link-document-container{
+            color: $color-text-secondary !important;
+            text-decoration: none;
+            display: flex;  
+            align-items: center;   
+            max-width: 220px !important;
+
+            p{
+                overflow-wrap: break-word;
+                width: 95%;
+               
+            }
+          
+            .pdf-icon{
+                background: $color-background-dark;
+                margin-right: 5px;
+
+                span{
+                    margin-bottom: 10px !important;
+                }
+
+                &:hover{
+                    border-color: none !important;
+                }
+            }
+         
+        }
+    }
+
+    &-message-user{
+        background: $color-primary;
+        color: $color-white;
+        margin-left: auto;
+        margin-right: 10px;       
+
+        & p{
+            text-align: left;
+        }
+
+        &-image{
+            background: none;
+            margin-left: auto;
+            margin-right: 10px;
+
+            & img{
+                text-align: left;
+            }
+        }
+
+        .link-document-container{
+            color: $color-white !important;
+            text-decoration: none;
+            display: flex;  
+            align-items: center;   
+            max-width: 220px !important;
+
+            p{
+                overflow-wrap: break-word;
+                width: 95%;
+               
+            }
+          
+            .pdf-icon{
+                background: $color-background-dark;
+                margin-right: 5px;
+
+                span{
+                    margin-bottom: 10px !important;
+                }
+
+                &:hover{
+                    border-color: none !important;
+                }
+            }
+         
+        }
+    }
+    
+
+    .ant-form-item{
+        margin-bottom: 0 !important;
+    }
+ 
+}

@@ -1,0 +1,158 @@
+@import "styles/main.scss";
+
+.member-card {
+  width: 100%;
+  min-height: 262px;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  background: $color-white;
+  box-shadow: 4px 0px 12px #37215714;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 2rem;
+  cursor: pointer;
+
+  &-left {
+    .member-avatar {
+      width: 100px;
+
+      &-img,
+      &-name {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        background: $color-text-third;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-name {
+        @include app-font(32px, 43px, bold);
+        color: $color-white;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-right {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .member-name {
+        font-weight: 500 !important;
+      }
+    }
+
+    .member-title {
+      font-weight: 500 !important;
+      margin-top: 12px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .member-about {
+      flex: 1;
+      @include app-font(16px, 24px);
+      color: $color-text-secondary;
+      padding: 0;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      /* autoprefixer: off */
+
+      @media (max-width: 575.98px) {
+        -webkit-line-clamp: 5;
+        /* autoprefixer: off */
+      }
+    }
+
+    .member-specialties {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+
+      .specialty-item {
+        margin-top: 4px;
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      margin-top: 24px;
+      padding-left: 0;
+
+      .member-card-right-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .member-name {
+          @include app-font(26px, 34px, bold);
+          color: $color-text-primary !important;
+        }
+
+        .custom-button {
+          display: none;
+        }
+      }
+
+      .member-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18px !important;
+        margin-bottom: 24px !important;
+        @include app-font(16px, 24px);
+        color: $color-text-primary !important;
+      }
+
+      .member-specialties {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .specialty-item {
+          margin-top: 8px !important;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .mobile-match-button {
+    display: none;
+
+    @media (max-width: 575.98px) {
+      display: block;
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    display: block;
+    padding: 24px 20px;
+    height: fit-content;
+  }
+}

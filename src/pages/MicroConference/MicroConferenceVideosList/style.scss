@@ -1,0 +1,94 @@
+@import "styles/_colors.scss";
+@import "styles/_mixins.scss";
+
+.micro-conference__videos-list {
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid #e1e2ee;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  overflow: hidden;
+}
+
+.micro-conference__videos-list-inner {
+  max-height: 400px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color-dark-purple, 0.3); 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba($color-dark-purple, 0.5);
+  }
+
+  > * + .micro-conference__videos-list-button {
+    border-top: 1px solid $color-border;
+  }
+
+  @media (max-width: 1023.98px) {
+    max-height: 200px;
+  }
+}
+
+.micro-conference__videos-list-button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  position: relative;
+  padding: 0.75rem 3rem 0.75rem 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color-border, 0.2);
+  }
+
+  &.micro-conference__videos-list-button--active {
+    background-color: rgba($color-border, 0.4);
+  }
+
+  &.micro-conference__videos-list-button--watched {
+
+    .micro-conference__videos-list-button-indicator {
+      background-color: $color-success;
+    }
+  }
+}
+
+.micro-conference__videos-list-button-indicator {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: $color-error;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: background-color .2s ease-in-out;
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid #e1e2ee;
+}
+
+.micro-conference__videos-list-button-title {
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1.2em;
+}
+
+.micro-conference__videos-list-button-duration {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}

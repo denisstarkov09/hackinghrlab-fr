@@ -1,0 +1,18 @@
+.certificate-list-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.certificate-card-list {
+    width: 70%
+}
+
+.channel-page__list-wrap {
+    padding-top: 1rem;
+    overflow: auto;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }

@@ -1,0 +1,53 @@
+@import "../../../styles/main.scss";
+
+.conference-leaderboard {
+  margin-top: 2rem;
+  width: 1000px;
+  position: relative;
+  height: calc(100vh - 72px);
+  overflow: auto;
+
+  @media (max-width: 1100px) {
+    margin-top: 23rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+  &-container {
+
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    @media (max-width: 500px) {
+      margin: 2rem 0rem;
+    }
+   
+  }
+
+  &-button{
+    width: 240px;
+    position: absolute;
+    left: 35%;
+    top: 0px;
+    z-index: 12;
+
+    @media (max-width: 500px) {
+      left: 20%
+    }
+  }
+ 
+}
+.ant-timeline-item-content > span{
+  font-weight: bold !important;
+}
+
+.ant-modal-footer{
+  display: flex;
+  justify-content: flex-end;
+}

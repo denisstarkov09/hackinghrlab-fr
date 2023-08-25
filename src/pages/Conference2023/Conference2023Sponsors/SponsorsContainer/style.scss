@@ -1,0 +1,32 @@
+@import "../../../../styles/main.scss";
+
+.container-sponsor{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .container-users{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    
+        .p-users{
+            margin: 0px;
+            padding: 0px 50px;
+            width: 200px;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    
+        .button-speaker{
+            width: auto;
+        }
+    }
+}

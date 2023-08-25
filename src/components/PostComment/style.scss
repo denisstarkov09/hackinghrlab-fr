@@ -1,0 +1,61 @@
+@import "styles/main.scss";
+
+.ant-comment {
+  border-top: 1px solid $color-border;
+  padding-top: 1em;
+}
+
+.ant-comment-avatar {
+  span {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  img {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 52px !important;
+  }
+}
+
+.ant-comment-content {
+  .ant-comment-content-author {
+    flex-direction: column;
+
+    :first-child {
+      margin-bottom: 0.5em;
+    }
+
+    &-name {
+      font-size: 16px;
+      color: $color-text-primary;
+      font-weight: bold;
+    }
+    &-time {
+      font-size: 12px;
+      color: $color-text-secondary;
+    }
+  }
+  .ant-comment-content-detail {
+    font-size: 16px;
+    color: $color-text-secondary;
+    margin-top: 2em !important;
+    margin-top: 1em;
+  }
+  .ant-comment-actions {
+    li {
+      span {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: $color-text-secondary;
+        svg {
+          width: 26px;
+          height: 26px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

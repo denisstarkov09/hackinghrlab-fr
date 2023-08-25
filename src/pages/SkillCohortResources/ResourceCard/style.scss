@@ -1,0 +1,108 @@
+@import 'styles/main.scss';
+
+.skill-cohort-resource-card {
+	min-height: 386px;
+	background: $color-white;
+	border: 1px solid $color-border;
+	border-radius: 0.5rem;
+	box-shadow: 4px 0px 14px #37215714;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	position: relative;
+	width: 100%;
+
+	&-header {
+		width: 100%;
+		min-height: 100px;
+		overflow: hidden;
+		border: 1px solid $color-border;
+		border-radius: 0.5rem;
+		background: $color-background-dark;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-backimg {
+		background-color: $color-text-primary;
+	}
+
+	&-content {
+		display: grid;
+		grid-template-rows: auto 1fr auto auto auto;
+		padding-top: 1.5rem;
+		overflow: hidden;
+		position: relative;
+
+		.mark-viewed {
+			padding: 0 12px;
+		}
+	}
+
+	&-release-date {
+		text-align: center;
+	}
+
+	&-join-btn {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.rating {
+	display: flex;
+}
+
+.card {
+  width: 320px;
+  height: 300px;
+	background: white;
+	padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.description {
+  color: #697077;
+  font-size: 14px;
+}
+
+.response-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.commentCtr {
+  font-weight: 700;
+}
+
+.assessmentBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-comments {
+  height: 250px;
+  overflow: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

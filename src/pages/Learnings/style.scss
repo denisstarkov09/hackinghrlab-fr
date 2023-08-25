@@ -1,0 +1,390 @@
+@import "styles/main.scss";
+
+.my-learnings-page {
+	display: block;
+	grid-template-columns: auto 1fr;
+	width: 100%;
+  max-width: 1620px;
+
+  .skill-cohort-certificate-page-wrapperr {
+    width: 1000px;
+    min-height: 500px;
+    padding: 20px 84px;
+    border: 1px solid $color-border;
+    background: rgb(26, 56, 82);
+    border-radius: 0.5rem;
+    box-shadow: 4px 0px 14px #37215714;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    position:absolute;
+    left:-10000px;
+    top:auto;
+
+    
+    .certificate {
+      width: 100%;
+
+      &-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid $color-disabled;
+      }
+
+      &-logo {
+        width: 72px;
+        min-width: 72px;
+        max-width: 72px;
+        height: 72px;
+        overflow: hidden;
+
+        img {
+          width: 72px;
+          height: 72px;
+          object-fit: cover;
+        }
+      }
+
+      &-title {
+        @include app-font(28px, 48px, 600);
+        color: $color-white !important;
+        margin: 24px 0 20px !important;
+      }
+
+      &-username {
+        @include app-font(40px, 48px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+      }
+
+      &-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 0 14px;
+      }
+
+      &-text1 {
+        @include app-font(22px, 19px);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+        text-align: center;
+
+        &.duration {
+          text-transform: capitalize;
+        }
+
+        &.signature {
+          white-space: nowrap;
+        }
+
+        &.organizer {
+          text-transform: capitalize;
+        }
+      }
+
+      &-text2 {
+        @include app-font(24px, 24px, bold);
+        color: $color-white !important;
+        margin-bottom: 1rem !important;
+        text-align: center;
+      }
+
+      &-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-sign {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+
+          .certificate-text1.date {
+            height: 3rem;
+            margin-bottom: 8px !important;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+
+        &-image {
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+          margin: 0 56px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &-divider {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $color-disabled;
+        margin-bottom: 10px;
+      }
+
+      &-signature {
+        width: 90px;
+        height: 3rem;
+        margin-bottom: 0.5rem;
+
+        img {
+          width: 90px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &-loading-more {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+	&-container {
+		height: calc(100vh - 72px);
+		background: $color-background;
+		overflow: auto;
+		padding: 4rem;
+		position: relative;
+
+		@media (max-width: 576px) {
+			padding: 1rem;
+		}
+	}
+
+	&__filters--button {
+		display: none;
+		margin-bottom: 1rem;
+
+		button {
+			width: 100%;
+		}
+
+		@media (max-width: 1023.98px) {
+			display: block;
+		}
+	}
+  @media (max-width: 1023.98px) {
+    display: block;
+  }
+
+	@media (max-width: 1023.98px) {
+		.podcast-filter-panel {
+			display: none;
+		}
+	}
+}
+
+.saved-for-later {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  gap: 1.25rem;
+}
+
+.completed-items {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  gap: 1.25rem;
+  @media (max-width: 1029px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.items-with-hr-credits {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  @media (max-width: 1029px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.my-learnings-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-gap: 2rem;
+	margin-bottom: 44px;
+	margin-top: 3rem;
+
+	@media (max-width: 1023.98px) {
+		margin: 1rem 4rem 44px;
+		justify-items: center;
+	}
+
+	@media (max-width: 767.98px) {
+		margin: 1rem 1rem 44px;
+		grid-row-gap: 42px;
+		grid-column-gap: 1rem;
+	}
+}
+
+.event-videos {
+  margin-top: 1rem;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .ant-collapse{
+    .panelDataHeight{
+      .iconPanelDrag{
+        width: 30px;
+        height: 100%;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: #f1f1f4;
+
+        .iconTop{
+          width: 20px;
+          height: 10px;
+          background: #fe5621;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          cursor: pointer;
+        }
+
+        .iconBottom{
+          width: 20px;
+          height: 10px;
+          background: #fe5621;
+          clip-path: polygon(50% 100%, 0 0, 100% 0);
+          cursor: pointer;
+        }
+      }
+      .containerButtonLearning, .containerButtonLearningData{
+        width: 300px;
+        padding-left: 20px; 
+        padding-right: 20px; 
+        height: 100%; 
+        position: absolute; 
+        right: 0px; 
+        top: 0px;
+        background: white;
+        z-index: 100;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        .shadowDataButton{
+          position: absolute;
+          top: 0px;
+          left: -30px;
+          background: linear-gradient(270deg, rgba(0, 0, 0, 0.06) 0%, rgba(255, 255, 255, 0) 50%);
+          width: 30px;
+          height: 100%;
+        }
+
+        .containerArrowMore{
+          display: none;
+          height: 100%;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 0px;
+
+          .arrowMore{
+            display: none;
+            width: 10px;
+            height: 15px;
+            background: #fe5621;
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            z-index: 100;
+          }
+        }
+
+        @media  (max-width: 700px){
+          width: 250px;
+
+          .butonLearningSelectTag{
+            transform: scale(0.75);
+          }
+
+          .containerArrowMore{
+            display: block;
+            height: 100%;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -5px;
+  
+            .arrowMore{
+              display: block;
+              width: 10px;
+              height: 15px;
+              background: #fe5621;
+              clip-path: polygon(0 50%, 100% 100%, 100% 0);
+              z-index: 100;
+            }
+          }
+        }
+      }
+
+    
+      .containerButtonLearningData{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        width: 40px;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+  
+}
+
+.learnings-filter-panel {
+  @media (max-width: 1029px) {
+    display: none;
+  }
+}
+
+.search-results-container {
+  &-mobile-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+    padding: 0 1rem;
+    background: $color-white;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e1e2ee;
+    @media (max-width: 1029px) {
+      display: flex;
+      margin-bottom: 0px;
+    }
+    .filters-btn {
+      color: $color-primary !important;
+      cursor: pointer;
+
+      &.disabled {
+        color: $color-disabled !important;
+        cursor: not-allowed;
+      }
+    }}
+}

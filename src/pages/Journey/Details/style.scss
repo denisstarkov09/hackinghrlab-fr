@@ -1,0 +1,316 @@
+@import "styles/main.scss";
+
+.journey-details-container {
+  
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 1rem;
+
+    &--back{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;      
+      align-content: center;
+      justify-items: center;
+      align-items: center;
+      svg {
+        width: 23px;
+        height: 23px;
+        margin-right: 1em;
+        color: $color-accent;
+        cursor: pointer;
+      }
+    }
+
+    &--progress {
+      display: flex;
+      flex-direction: column;
+      width: 150px;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+      span{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+      .learning-details--progress {
+        width: 100%;
+        text-align: center;
+        color: $color-accent;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3em;
+
+    &--switch {
+      display: flex;
+      width: 200px;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $color-text-primary;
+      
+      .ant-switch {
+        background-color: $color-error;
+        text-transform: uppercase;
+      }
+      .ant-switch-checked {
+        background-color: $color-success;
+        text-transform: uppercase;
+      }
+    }
+    margin-bottom: 2rem;
+  }
+
+  &__date {
+    height: 53px;
+    background: $color-background;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    font-weight: normal !important;
+
+    h4 {
+      color: $color-text-secondary !important;
+      font-weight: normal !important;
+    }
+  }
+
+  &__list {
+    margin-top: 1em;
+    padding-bottom: 5em;
+  }
+
+  &__card__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 210px;
+
+    &--check{
+      width: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1em;
+
+      &--line {
+        width: 4px;
+        background-color: $color-border;
+        height: 100%;
+      }
+      &--circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        border: 3px solid $color-border;
+        margin-left: -18px;
+        opacity: 1;
+        background-color: $color-white;
+        
+        svg{
+          display: none;
+        }
+      }
+      &--blue-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        background-color: $color-accent;
+        margin-left: -18px;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+          width: 85%;
+          margin: 0 auto;
+          path{
+            stroke: $color-white;
+            stroke-width: 60px;
+          }
+        }
+      }
+    }
+
+    &--content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-left: 1rem;
+      padding-left: 1em;
+      padding-top: 1em;
+
+      &--order{
+        width: 24px;
+        height: 195px;
+        margin-right: 0.5rem;
+
+        svg path {
+          stroke: $color-text-third;
+        }
+      }
+      &--card{
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 8px;
+        min-height: 195px;
+        max-height: 220px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .card-image {
+          width: 45%;
+          img {
+            width: 100%;
+            border-radius: 8px;
+            opacity: 1;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-information {
+          padding: 2em;
+          padding-top: 1.5em;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            color: $color-text-primary !important;
+            font-weight: normal !important;
+            margin-bottom: 1em !important;
+
+            a {
+              color: $color-text-primary !important;
+              font-weight: normal !important;
+            }
+          }
+
+          p {
+            color: $color-text-secondary;
+            font-size: 14px;
+          }
+
+          .ant-typography-ellipsis {
+            color: $color-text-secondary;
+            font-size: 14px;
+            min-height: 66px;
+          }
+
+          .card-information-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex: 1;
+
+            .content-type {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              justify-items: center;
+              color: $color-text-third;
+              font-size: 12px;
+              letter-spacing: 0px;
+
+              svg {
+                color: $color-text-third !important;
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+                path {
+                  stroke: $color-text-third;
+                }
+              }
+            }
+
+            .button-viewed {
+              background-color: $color-white;
+              border-color: 1px solid $color-accent;
+              color: $color-accent;
+            }
+
+            button {
+              border-radius: 4px;
+              height: 28px;
+              line-height: 0px;
+              font-size: 14px;
+            }
+
+            button:first-child {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.removed {
+  .card-image {
+    opacity: 0.5;
+  }
+  .card-information {
+    h3, .ant-typography {
+      opacity: 0.5;
+    }
+  }
+  .journey-details-container__card__container--check--blue-circle,
+  .journey-details-container__card__container--check--circle {
+    opacity: 0;
+  }
+}
+
+.card-new-flag-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  span {
+    width: 66px;
+    height: 28px;
+    background-color: $color-primary;
+    border-radius: 100px;
+    opacity: 1;
+    color: $color-white;
+    font-size: 14px;
+    margin-top: -33px;
+    margin-right: -63px;
+    text-align: center;
+    line-height: 28px;
+  }
+}

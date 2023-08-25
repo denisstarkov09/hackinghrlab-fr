@@ -1,0 +1,102 @@
+@import "styles/main.scss";
+
+.custom-select, .custom-select2 {
+  width: 100%;
+
+  .ant-select-selector {
+    min-height: 52px;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 0 48px 0 16px !important;
+    background-color: transparent !important;
+
+    @media (max-width: 575.98px) {
+      height: 44px !important;
+    }
+  }
+
+  &.border .ant-select-selector {
+    border: 1px solid $color-border !important;
+  }
+
+  &.ant-select-focused .ant-select-selector {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+    @include app-font(20px, 34px);
+    color: $color-text-secondary;
+  }
+
+  .ant-select-arrow {
+    font-size: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: calc(50% + 6px) !important;
+    transform: translate(0, -50%) !important;
+    color: $color-text-primary !important;
+  }
+
+  .ant-select-selection-search {
+    @include app-font(20px, 34px);
+    color: $color-text-secondary;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 575.98px) {
+    .ant-select-selection-item {
+      @include app-font(16px, 24px);
+      color: $color-text-primary !important;
+    }
+  }
+}
+
+.custom-select2{
+  height: 40px;
+  min-height: 40px;
+  .ant-select-selector {
+    width: 200px;
+    height: 40px;
+    min-height: 40px;
+    overflow: hidden scroll;
+    
+    .ant-select-selection-overflow{
+      padding-top: 5.5px;
+    }
+  }
+
+  .ant-select-selector::-webkit-scrollbar{
+    width: 5px;
+    height: 0px;
+  }
+  
+  .ant-select-selector::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: $color-text-secondary;
+  }
+}
+
+@media (max-width: 750px) {
+  .custom-select2 {
+    .ant-select-selector{
+      width: 100%
+    }
+  }
+}
+
+.custom-select-dropdown {
+  .ant-select-item-option-content {
+    @include app-font(20px, 34px);
+    color: $color-text-secondary;
+    padding-left: 8px;
+
+    @media (max-width: 575.98px) {
+      @include app-font(16px, 24px);
+      color: $color-text-primary !important;
+    }
+  }
+}

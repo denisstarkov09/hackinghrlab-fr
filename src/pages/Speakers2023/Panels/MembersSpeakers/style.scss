@@ -1,0 +1,58 @@
+@import "../../../../styles/main.scss";
+
+
+.container-users{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .container-data-member{
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+
+        .container-p{
+            display: flex;
+            width: auto;
+            height: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .p-title{
+                margin: 0px;
+                padding: 0px;
+                width: 200px;
+                font-weight: 450;
+                font-size: 22px;
+                line-height: 28px;
+                color: #000000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: start;
+                margin-left: 10px;
+            }
+
+            .p-profession{
+                margin: 0px;
+                padding: 0px;
+                width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: start;
+                margin-left: 10px;
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.6);
+            }  
+        }
+        
+    }
+
+    .button-speaker{
+        width: auto;
+    }
+}

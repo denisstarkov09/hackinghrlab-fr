@@ -1,0 +1,185 @@
+@import "styles/main.scss";
+
+.skill-cohort-page {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	width: 100%;
+  max-width: 1620px;
+  position: relative;
+
+  .background-cohorts{
+    position: relative;
+    background: $color-background;
+    height: calc(100vh - 72px);
+    width: 100%;
+  }
+
+	&-container {
+		height: calc(100vh - 72px);
+		background: $color-background;
+		overflow: auto;
+		padding: 2rem;
+		position: relative;
+
+		@media (max-width: 576px) {
+			padding: 1rem;
+		}
+
+    &-menu {
+      background: transparent !important;
+
+      &-item{
+        font-size: 1.2rem !important;
+        @media (max-width: 760px ) and  (min-width: 750px ){
+          font-size: 1.3rem !important;
+        }
+         
+
+          &:hover, &:active{
+            border-bottom: 2px solid $color-primary !important;
+            color: $color-primary !important;
+          }
+
+          &.ant-menu-item-selected{
+          border-bottom: 2px solid $color-primary !important;
+          color: $color-primary !important;
+          background: transparent !important;
+          }
+      }
+      & .ant-menu-submenu-selected{
+        border-bottom: 2px solid $color-primary !important;
+          color: $color-primary !important;
+      }
+    }
+	}
+
+	&__filters--button {
+		display: none;
+		margin-bottom: 1rem;
+
+		button {
+			width: 100%;
+		}
+
+		@media (max-width: 1023.98px) {
+			display: block;
+		}
+	}
+
+	@media (max-width: 1023.98px) {
+		.podcast-filter-panel {
+			display: none;
+		}
+	}
+}
+
+.skill-cohort-list {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(260px, 1fr));
+	grid-gap: 2rem;
+	margin-bottom: 44px;
+	margin-top: 3rem;
+
+	@media (max-width: 1023.98px) {
+		margin: 1rem 4rem 44px;
+		justify-items: center;
+	}
+
+	@media (max-width: 767.98px) {
+		margin: 1rem 1rem 44px;
+		grid-row-gap: 42px;
+		grid-column-gap: 1rem;
+    grid-template-columns: repeat(1, minmax(260px, 1fr));
+	}
+}
+
+@media (max-width: 1023.98px) {
+  .skill-cohort-filter-panel {
+    display: none;
+  }
+
+  .skill-cohort-page {
+    grid-template-columns: none;
+  }
+}
+
+.project-x-advertisement-content {
+  display: flex;
+}
+
+.project-x-advertisement-wrapper {
+  // margin-left: auto;
+  // margin-right: auto;
+  width: 100%;
+
+  &-preview {
+    margin-top: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .advertisement {
+      width: 275px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 275px;
+      cursor: pointer;
+
+      &-img {
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  &-content {
+    margin-top: 10px;
+    
+    .advertisement {
+      width: 275px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 275px;
+      cursor: pointer;
+
+      &-img {
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.display-general-information {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+
+  .information {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  @media (max-width: 1200px) {
+
+    .information {
+      margin-left: 0%;
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+  .advertisements {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

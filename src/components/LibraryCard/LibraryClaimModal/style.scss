@@ -1,0 +1,13 @@
+.library-claim-modal {
+  padding-left: 1rem;
+
+  h5 {
+    margin-bottom: 1rem !important;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+}

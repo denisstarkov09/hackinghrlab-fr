@@ -1,0 +1,113 @@
+@import "styles/main.scss";
+
+.article-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  height: 195px;
+  cursor: pointer;
+  width: 100%;
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 152px 1fr;
+    height: 400px;
+  }
+
+  &-img {
+    width: 220px;
+    height: 195px;
+    border: 1px solid $color-border;
+    border-radius: 0.5rem;
+    background: $color-background-dark;
+    overflow: hidden;
+
+    @media (max-width: 575.98px) {
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    padding: 1.5rem 28px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    @media (max-width: 575.98px) {
+      padding: 1.5rem 20px;
+    }
+
+    & > h3 {
+      font-weight: 500 !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    & p {
+      @include app-font(14px, 21px, 500);
+      color: $color-text-secondary !important;
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      margin: 0;
+      height: 100%;
+      /* autoprefixer: off */
+
+      @media (max-width: 575.98px) {
+        @include app-font(16px, 24px, 500);
+      }
+    }
+
+    &-file {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .article-card-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+
+        &.custom-icon {
+          margin-left: 0.5rem;
+        }
+
+        @media (max-width: 575.98px) {
+          width: 2rem !important;
+          height: 2rem !important;
+
+          &.custom-icon {
+            margin-left: 0.75rem;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      & h6 {
+        font-weight: 500 !important;
+        color: $color-text-third !important;
+        margin-left: 0.25rem !important;
+
+        @media (max-width: 575.98px) {
+          @include app-font(16px, 21px);
+        }
+      }
+    }
+  }
+}

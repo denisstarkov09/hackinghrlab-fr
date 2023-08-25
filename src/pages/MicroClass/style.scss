@@ -1,0 +1,263 @@
+@import "styles/_colors.scss";
+@import "styles/_mixins.scss";
+
+.micro-class__page {
+  padding: 2rem 0;
+  height: calc(100vh - 72px);
+  overflow: auto;
+
+  @media (max-width: 575.98px) {
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 1023.98px) {
+    > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .ant-tabs-tabpane-active {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.micro-class__container {
+  padding: 0 1rem;
+  width: 100%;
+  // max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.micro-class__row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1023.98px) {
+    > * + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.micro-class__class-information {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
+}
+
+.micro-class__row-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0.5rem;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 1023.98px) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &--video-player {
+    width: 70%;
+
+    @media (max-width: 1023.98px) {
+      width: 100%;
+    }
+  }
+
+  &--video-list {
+    width: 29%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &--title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px !important;
+
+      svg {
+        width: 30px !important;
+        margin-right: 15px;
+        color: $color-text-primary;
+        cursor: pointer;
+      }
+    }
+
+    .micro-class__claim-certificate-button-wrap {
+      button {
+        width: 100%;
+        display: block;
+      }
+
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 1023.98px) {
+      width: 100%;
+    }
+  }
+}
+
+.micro-class__claim-certificate-button-span {
+  font-size: 0.75rem;
+  text-align: center;
+  display: block;
+}
+
+.micro-class__description-card {
+  box-shadow: 4px 0px 14px #37215714;
+  border: 1px solid #e1e2ee;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  padding: 1rem;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.micro-class__description-p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.micro-class__addition-info-col {
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.micro-class__additional-info-card {
+  border: 1px solid #e1e2ee;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.micro-class__additional-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+.micro-class__additional-info-col {
+  width: 25%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.5rem;
+
+  @media (max-width: 577px) {
+    width: 50%;
+  }
+}
+
+.micro-class__additional-info-ico {
+  display: block;
+  width: 100%;
+  max-width: 65px;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.25rem;
+  background-color: $color-white;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #e1e2ee;
+  box-shadow: 4px 0px 14px rgba(#372157, 0.3);
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.micro-class__additional-info-item {
+  display: block;
+  text-align: center;
+  font-size: 0.95rem;
+  color: $color-text-primary;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+.micro-class__additional-info-item-text {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.micro-class__additional-info-item-text-sub {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $color-text-secondary;
+  font-size: 0.75rem;
+}
+
+.microclass-certificate {
+  position: absolute;
+  top: 80px;
+  z-index: -1;
+}
+
+.microclasse-firewall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3c475252;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .upgrade-notification-panel {
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    background: $color-primary;
+    text-align: center;
+    width: fit-content;
+
+    h3 {
+      color: $color-white !important;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 1rem;
+
+      h3 {
+        @include app-font(16px, 21px, 600);
+      }
+    }
+  }
+}

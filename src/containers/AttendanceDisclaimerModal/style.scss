@@ -1,0 +1,43 @@
+@import "styles/main.scss";
+
+.attendance-disclaimer {
+  padding: 0.5rem;
+
+  &-content {
+    @include app-font(14px, 21px);
+    margin-bottom: 44px;
+    color: $color-text-primary;
+  }
+
+  &-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-form {
+    .ant-form-item-label {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.mobile {
+    padding: 44px 20px 56px;
+
+    .attendance-disclaimer-content {
+      @include app-font(20px, 30px);
+      color: $color-text-primary;
+    }
+
+    .attendance-disclaimer-footer {
+      .custom-button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.attendance-confirm-modal-wrap {
+  z-index: 1010 !important;
+}

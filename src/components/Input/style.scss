@@ -1,0 +1,112 @@
+@import "styles/main.scss";
+
+.custom-input {
+  min-height: 52px !important;
+  padding: 0.75rem 1rem !important;
+  background: $color-white;
+  border: 1px solid $color-border !important;
+  border-radius: 0.5rem !important;
+  @include app-font(20px, 30px);
+  color: $color-text-secondary !important;
+
+  &:not(.mutiple) {
+    max-height: 52px;
+  }
+
+  .ant-input-group-addon {
+    border: none !important;
+    padding: 0;
+    @include app-font(20px, 30px);
+    color: $color-text-secondary;
+  }
+
+  .ant-input {
+    border: none !important;
+    padding: 0;
+    @include app-font(20px, 30px);
+    color: $color-text-secondary;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &.sm {
+    min-height: 40px !important;
+    padding: 0.5rem 0.5rem !important;
+    @include app-font(16px, 28px);
+
+    .ant-input-group-addon,
+    .ant-input {
+      @include app-font(16px, 28px);
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    min-height: 44px !important;
+    height: 44px;
+  }
+}
+
+.ant-picker-input > input:hover{
+  border-color: $color-primary !important;
+}
+
+.ant-picker-active-bar{
+  background: $color-primary !important;
+}
+
+
+
+.ant-picker-cell {
+  opacity: 0;
+
+  &.ant-picker-cell-in-view {
+    opacity: 1;
+
+    .ant-picker-calendar-date-value {
+      color: $color-text-primary !important;
+    }
+
+    .ant-picker-calendar-date-today {
+      border: 1px solid $color-primary !important;
+      background: transparent;
+      border-radius: 4px;
+
+      .ant-picker-calendar-date-value {
+        color: $color-primary !important;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+    border: 1px solid $color-primary !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner
+
+  &.ant-picker-cell-selected .ant-picker-cell-inner,
+  &.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner{
+    background: $color-primary !important;
+    border: 1px solid $color-primary !important;
+    border-radius: 4px;
+
+    .ant-picker-calendar-date-value {
+      color: $color-white !important;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.ant-picker-ranges .ant-btn-primary{
+  background: $color-primary;
+  border-color: $color-primary;
+}
+

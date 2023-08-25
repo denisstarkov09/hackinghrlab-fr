@@ -1,0 +1,51 @@
+@import "styles/main.scss";
+
+.feedback-box-container {
+  background-color: #bfbfbf;
+  border: 1px solid #e1e2ee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: 0px;
+  position: fixed;
+  right: 20px;
+  width: 300px;
+  z-index: 999;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
+
+.feedback-box-container__header {
+  background-color: #bfbfbf;
+  border-bottom: 1px solid #e1e2ee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  height: 40x;
+  text-align: center;
+}
+
+.feedback-box-container__header img {
+  width: 15px;
+}
+
+.feedback-box-container__header h4 {
+  line-height: 40px !important;
+}
+
+.feedback-box-container__container {
+  padding: 0.5em;
+}
+
+.feedback-box-container__container--textarea {
+  font-size: 12px !important;
+  height: 150px !important;
+  line-height: 15px !important;
+  max-height: 150px !important;
+}
+
+.feedback-box-container__button {
+  padding: 0.2em;
+  text-align: center;
+}

@@ -1,0 +1,219 @@
+@import "styles/main.scss";
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-icon-close{
+    width:100%; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    z-index:100; 
+
+    .icon-close{
+      width: 25px; 
+      height: 25px; 
+      transform: rotate(45deg); 
+      border-radius: 50%; 
+      margin-left:350px; 
+      cursor:pointer;
+    }
+  }
+
+  .login-dialog {
+    border-radius: 5px;
+    box-shadow: 4px 0px 14px #37215714;
+    position: relative;
+    background: $color-white !important;
+    border: 1px solid $color-border;
+    width: 472px;
+
+    .auth-alert {
+      margin: 24px 2rem 0;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0 16px;
+
+      h3 {
+        font-weight: bold !important;
+        color: $color-text-secondary !important;
+      }
+    }
+
+    &-logo {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 1px solid $color-border;
+      overflow: hidden;
+      top: -36px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: $color-white;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-form {
+      padding: 2rem;
+      background-color: $color-white;
+      overflow: auto;
+      max-height: calc(100vh - 200px);
+    }
+
+    &-content {
+      &-back {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .ant-form-item-label > label {
+        white-space: normal;
+        text-align: left;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .ant-form-item-has-error .ant-form-item-explain-error {
+        color: $color-primary !important;
+      }
+
+      .ant-form-item-required {
+        @include app-font(14px, 19px, 600);
+        color: $color-text-secondary !important;
+
+        &::before {
+          display: none !important;
+        }
+      }
+
+      .form-full-name {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .form-recaptcha .ant-form-item-control-input-content {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-footer {
+      height: calc(100% - 90px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .custom-button {
+        width: 100%;
+      }
+
+      .signup-select {
+        @include app-font(16px, 24px, bold);
+        color: $color-accent;
+        cursor: pointer;
+        margin-left: 12px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &-error {
+        margin-bottom: 0.5rem;
+        color: $color-primary;
+      }
+
+      .forgot-password {
+        @include app-font(16px, 24px, bold);
+        color: $color-text-secondary !important;
+        text-align: center;
+      }
+
+      &-bottom {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-category {
+        margin-top: 1rem;
+
+        .account-desc {
+          @include app-font(16px, 24px);
+          color: $color-text-secondary;
+        }
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      height: calc(100% - 96px);
+      margin-top: 96px;
+      border: none;
+      box-shadow: none;
+
+      .login-dialog-logo {
+        width: 92px;
+        height: 92px;
+        top: -46px;
+      }
+    }
+  }
+
+  .form-job-level,
+  .form-organization-size {
+    .custom-radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .form-recent-workarea {
+    .ant-checkbox-wrapper {
+      margin-top: 12px;
+      margin-left: 0 !important;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    background: $color-background-dark;
+  }
+}
+
+.term-and-conditions {
+  font-weight: 600;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}

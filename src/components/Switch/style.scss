@@ -1,0 +1,7 @@
+@import "styles/main.scss";
+
+.custom-switch {
+  &.ant-switch-checked {
+    background-color: $color-primary !important;
+  }
+}

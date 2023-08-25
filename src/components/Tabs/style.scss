@@ -1,0 +1,68 @@
+@import "styles/main.scss";
+
+.custom-tabs-tabpane{
+  overflow: scroll;
+  height: calc(100vh - 220px);
+  padding-right: 5%;
+  padding-top:20px ;
+}
+
+.custom-tabs {
+
+  .ant-tabs-tab {
+    margin-right: 0 !important;
+    padding: 18px 0px !important;
+    flex: 1;
+    margin-left: 0 !important;
+    justify-content: center;
+    @media (max-width: 2600px) {
+      padding: 18px 5% !important;
+      
+    }
+
+    @media (max-width: 1200px) {
+      padding: 18px 2% !important;
+      
+    }
+
+    @media (max-width: 400px) {
+      padding: 18px 1% !important;
+      width: 100%;
+    }
+  
+  
+
+    .ant-tabs-tab-btn {
+      @include app-font(20px, 30px);
+      color: $color-text-secondary !important;
+    }
+
+    &.ant-tabs-tab-active {
+      .ant-tabs-tab-btn {
+        color: $color-primary !important;
+      }
+    }
+  }
+
+  .ant-tabs-ink-bar {
+    background: $color-primary !important;
+    height: 3px !important;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 0 !important;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    @media (max-width: 1200px) {
+      width: 80%;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}

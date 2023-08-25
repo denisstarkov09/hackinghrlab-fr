@@ -1,0 +1,86 @@
+@import "styles/main.scss";
+
+.member-details {
+  margin: -24px;
+
+  &-header {
+    background: $color-background-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .user-info {
+      &-avatar {
+        margin-top: 26px;
+      }
+
+      &-name {
+        margin-top: 0.5rem !important;
+        margin-bottom: 37px !important;
+
+        @media (max-width: 575.98px) {
+          @include app-font(26px, 34px, bold);
+        }
+      }
+    }
+
+    .profile-complete-btn {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @media (max-width: 575.98px) {
+        width: calc(100% - 40px);
+      }
+    }
+  }
+
+  &-content {
+    padding: 20px 2rem 40px;
+
+    @media (max-width: 575.98px) {
+      padding: 20px 20px 40px;
+    }
+
+    &-label {
+      font-weight: bold !important;
+      margin-top: 52px !important;
+
+      @media (max-width: 575.98px) {
+        @include app-font(16px, 21px, 600);
+        color: $color-text-secondary !important;
+        margin-top: 28px !important;
+      }
+    }
+
+    &-text {
+      @include app-font(20px, 30px);
+      color: $color-text-secondary;
+
+      @media (max-width: 575.98px) {
+        @include app-font(16px, 24px);
+        color: $color-text-primary !important;
+        margin-top: 8px;
+      }
+    }
+
+    &-specialties {
+      display: flex;
+      flex-wrap: wrap;
+
+      .specialty-item {
+        margin-top: 12px;
+        margin-right: 20px;
+      }
+
+      @media (max-width: 575.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+      }
+    }
+  }
+}

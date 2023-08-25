@@ -1,0 +1,90 @@
+@import "../../styles/main.scss";
+
+.live-page {
+  height: calc(100vh - 92px);
+  background: $color-background;
+  overflow-y: scroll;
+
+  &--container {
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--videoplayer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .video{
+        width: 75%;
+        height: 30vw;
+        @media (max-width: 1023.98px) {
+          height: 50vw;
+        }
+      }
+      .chat {
+        width: 30%;
+        iframe {
+          width: 100%;
+          height: 30vw;
+        }
+      }
+      @media (max-width: 1023.98px) {
+        flex-direction: column;
+        .video{
+          width: 100%;
+        }
+        .chat {
+          width: 100%;
+        }
+      }
+    }
+
+    .ant-divider {
+      background-color: $color-primary;
+      @media (max-width: 1023.98px) {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .live-item {
+      padding-top: 5px;
+      @media (max-width: 1023.98px) {
+        padding: 1rem;
+      }
+    }
+
+    .live-confirm-assistence-button-container {
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+    }
+
+    .live-item-container {
+      display: flex;
+      padding-top: 1rem;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+.buttons-confirm-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+.home-page-container--upgrade{
+  margin: 0 auto ;
+}
+
+.confirmParticipationDisabled {
+  cursor: not-allowed;
+}

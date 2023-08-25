@@ -1,0 +1,56 @@
+
+@import "../../../styles/main.scss";
+
+.conference-list {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: auto;
+
+  @media (max-width: 1024px) {
+    margin-top: 2rem;
+   
+}
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+
+    &-select {
+      display: flex;
+      align-items: center;
+    }
+
+    &-sort {
+      margin-left: 1rem;
+      max-width: 200px;
+    }
+  }
+
+  &-container {
+    // margin: 1rem 8%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+
+    @media (max-width: 500px) {
+      margin: 2rem 0rem;
+      margin-top: 10rem;
+    }
+
+    .annual-conference-card {
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  &-info-icon{
+    color: $color-accent !important;
+
+    &:hover{
+      color: $color-info !important
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "styles/main.scss";
+
+.circular-progress-bar {
+  position: relative;
+
+  .ant-progress-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ant-progress-circle-trail {
+    stroke: #ffffff !important;
+  }
+
+  &-inner {
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include app-font(14px, 21px);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #e1e2ee;
+  }
+
+  &-dot {
+    position: absolute;
+    color: $color-primary;
+  }
+}

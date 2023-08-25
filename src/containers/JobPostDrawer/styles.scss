@@ -1,0 +1,24 @@
+.job-post-drawer-custom-select {
+  .ant-select-selector {
+    border-radius: 8px !important;
+    min-height: 52px !important;
+  }
+}
+
+.header-container {
+  margin-bottom: 1rem;
+}
+
+.preferred-skills-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.preferred-skills-content {
+  flex-grow: 1;
+}
+
+.minus-btn {
+  margin-left: 1rem;
+}

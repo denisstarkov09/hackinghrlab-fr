@@ -1,0 +1,54 @@
+@import "styles/main.scss";
+
+.notification-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.notification-content {
+  width: 250px;
+
+  .loading-container {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.notification-item {
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  grid-gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  cursor: pointer;
+  margin-left: -0.5rem;
+  margin-bottom: 0.75rem;
+
+  &.see-more a {
+    grid-column: 2 / 3;
+    color: $color-primary !important;
+  }
+
+  &-circle {
+    display: block;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    background: $color-primary;
+    border-radius: 50%;
+  }
+
+  &-message {
+    word-break: break-all;
+    overflow: hidden;
+    font-weight: 400 !important;
+  }
+
+  &:hover {
+    .notification-item-message {
+      color: $color-primary !important;
+    }
+  }
+}

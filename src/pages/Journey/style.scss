@@ -1,0 +1,19 @@
+@import "styles/main.scss";
+
+.learning-journey-page {
+  width: 100%;
+  padding-top: 3rem;
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+
+  &--content {
+    margin: 0 auto;
+    max-width: 904px;
+  }
+
+  button {
+    span {
+      font-weight: normal !important;
+    }
+  }
+}

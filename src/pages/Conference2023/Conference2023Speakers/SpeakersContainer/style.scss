@@ -1,0 +1,445 @@
+@import "../../../../styles/main.scss";
+
+.container-speakers{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+    .container-users{
+        width: 300px;
+        height: 440px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(100px);
+        border-radius: 12px;
+        display: flex;
+        margin-bottom: 25px;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+
+        .container-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding:25px;
+            margin-top: -10px;
+
+            .p-users-speakers{
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgba(255, 255, 255, 0.6);
+                margin: 0px;
+            }
+
+            .p-users-name{
+                margin: 0px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                color: white;
+                width: 100%;
+                font-size: 28px;
+            }
+
+            .p-users-profession{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgba(255, 255, 255, 0.6);
+                margin: 0px;
+            }
+
+            .p-users-biografi{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                height: 130px;
+                color: rgba(255, 255, 255, 0.35);
+                margin: 0px;
+                margin-top: 20px;
+            }
+        
+            .button-speaker{
+                width: auto;
+            }
+
+        }
+
+        .container-picture{
+            width: 100%;
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0px;
+            border-radius: 0px 12px 12px 0px;
+            color: white;
+            font-size: 80px;
+            overflow: hidden;
+            margin-top: -110px;
+
+            .container-img-people{
+                width: 275px;
+                height: 100%;
+                .img-people{
+                    width: 275px;
+                    height: 100%;
+                }
+            }
+
+            .container-avatar{
+                width: 178px;
+                height: 178px;
+                position: relative;
+                border: 4px solid #73869d;
+                border-radius: 100%;
+            }
+
+            @media (max-width: 600px) {
+                .container-avatar{
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+
+    }
+
+    .button-linkedin{
+        position: absolute;
+        width: 70px;
+        height: 35px;
+        background-image: url(../../../../images/linkedin-icon.svg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        left: 20px;
+        bottom: 80px;
+    }
+
+    .p-users-more{
+        margin: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.652);
+        width: 100%;
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container-speakers{
+        align-items: center;
+        flex-direction: column;
+
+        .container-users{
+           width: 50%; 
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .container-speakers{
+        .container-users{
+           width: 80%; 
+        }
+    }
+}
+
+.container-conference-speakers{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+    .container-users-speakers{
+        width: 300px;
+        height: 440px;
+        background: #34455c;
+        backdrop-filter: blur(100px);
+        border-radius: 12px;
+        display: flex;
+        margin-bottom: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+
+        .container-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding:25px;
+            margin-top: -10px;
+
+            .p-users-speakers{
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgba(255, 255, 255, 0.6);
+                margin: 0px;
+            }
+
+            .p-users-name{
+                margin: 0px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                color: white;
+                width: 100%;
+                font-size: 28px;
+            }
+
+            .p-users-profession{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgba(255, 255, 255, 0.6);
+                margin: 0px;
+            }
+
+            .p-users-biografi{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
+                font-weight: 275;
+                font-size: 16px;
+                line-height: 21px;
+                height: 130px;
+                color: rgba(255, 255, 255, 0.35);
+                margin: 0px;
+                margin-top: 20px;
+            }
+        
+            .button-speaker{
+                width: auto;
+            }
+
+        }
+
+        .container-picture{
+            width: 100%;
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0px;
+            border-radius: 0px 12px 12px 0px;
+            color: white;
+            font-size: 80px;
+            overflow: hidden;
+            margin-top: 20px;
+
+            .container-img-people{
+                width: 275px;
+                height: 100%;
+                .img-people{
+                    width: 275px;
+                    height: 100%;
+                }
+            }
+
+            .container-avatar{
+                width: 178px;
+                height: 178px;
+                position: relative;
+                border: 4px solid #73869d;
+                border-radius: 100%;
+            }
+
+            @media (max-width: 600px) {
+                .container-avatar{
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .container-avatar{
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .container-users-speakers{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .button-linkedin{
+        position: absolute;
+        width: 70px;
+        height: 35px;
+        background-image: url(../../../../images/linkedin-icon.svg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        left: 20px;
+        bottom: 80px;
+    }
+
+    .p-users-more{
+        margin: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.652);
+        width: 100%;
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .container-conference-speakers{
+        align-items: center;
+        flex-direction: column;
+
+        .container-users-speakers{
+           width: 80%; 
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container-conference-speakers{
+        .container-users-speakers{
+           width: 95%; 
+        }
+    }
+}
+
+.window-user {
+    width: 100% ;
+    height: 100vh ;
+    left: 0px;
+    top: 0px ;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    z-index: 800;
+    overflow: hidden;
+
+    .container-icon-close{
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        z-index:100; 
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    
+        .icon-close{
+          width: 25px; 
+          height: 25px; 
+          transform: rotate(45deg); 
+          cursor:pointer;
+        }
+      }
+
+    .card-popUp{
+        width: 600px;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+        background: white;
+        border-radius: 7px;
+        position: relative;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: hidden scroll;
+        scrollbar-color: #d9d9d9;
+        scrollbar-width: thin;
+
+        .title-name{
+            width: 100%;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        p .bold-subtitle{
+            font-weight: bold;
+        }
+
+        .container-sessions-speakers { 
+            margin-bottom: 20px;
+            width: 100%;
+            background: #efefef8f;  /* fallback for old browsers */
+            height: auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+            h3 {
+                padding-bottom: 10px;
+            }
+
+            p {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        .card-popUp{
+            width: 400px;
+        }
+    }
+
+    .card-popUp::-webkit-scrollbar {
+        width: 8px;              
+    }
+      
+    .card-popUp::-webkit-scrollbar-track {
+        background: transparent; 
+        border-radius: 5px;       
+    }
+      
+    .card-popUp::-webkit-scrollbar-thumb {
+        background-color: #d9d9d9;  
+        border-radius: 20px;     
+    }
+    
+    .card-popUp::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}

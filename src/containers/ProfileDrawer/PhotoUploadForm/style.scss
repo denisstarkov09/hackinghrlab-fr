@@ -1,0 +1,45 @@
+@import "styles/main.scss";
+
+.photo-upload-form {
+  &-img {
+    min-width: 400px;
+    min-height: 400px;
+    background: $color-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 575.98px) {
+      min-width: 200px;
+      min-height: 200px;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3.5rem;
+
+    .profile_pic {
+      display: none;
+    }
+
+    .upload-btn {
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+
+      .custom-button {
+        width: 100%;
+      }
+
+      .upload-btn {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

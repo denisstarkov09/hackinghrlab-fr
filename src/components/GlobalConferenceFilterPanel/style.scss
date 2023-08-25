@@ -1,0 +1,58 @@
+@import "styles/main.scss";
+
+.global-conference-filter-panel {
+  width: 266px;
+  height: calc(100vh - 72px);
+  background: $color-white;
+  box-shadow: 4px 0px 14px #37215714;
+  padding: 20px 2rem 2rem;
+  z-index: 9;
+  overflow: auto;
+
+  .attending-label {
+    margin-right: 37px;
+    color: $color-success;
+    @include app-font(16px, 21px, normal);
+    white-space: nowrap;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > button {
+    margin-bottom: 1rem !important;
+  }
+
+  .search-input {
+    margin: .5rem 0 2.25rem;
+  }
+
+  &-share {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .custom-calendar {
+    margin-bottom: 52px;
+    margin-top: 10px;
+  }
+
+  .search-filter {
+    margin-top: 20px;
+
+    & > .ant-checkbox-group {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+
+      .ant-checkbox-wrapper {
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}
